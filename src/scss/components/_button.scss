@@ -1,0 +1,15 @@
+.button {
+	padding: toRem(12) toRem(48);
+	text-align: center;
+	font-size: toRem(18);
+	font-weight: 500;
+	border-radius: toRem(8);
+	&--fill {
+		background-color: var(--purple);
+		color: var(--white);
+	}
+	&--border {
+		border: toRem(1) solid var(--primary);
+		color: var(--purple);
+	}
+}

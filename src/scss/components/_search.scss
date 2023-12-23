@@ -1,0 +1,46 @@
+.form-search {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		left: toRem(20);
+		top: 50%;
+		transform: translateY(-50%);
+		width: toRem(20);
+		height: toRem(20);
+		background: url("../icons/search.svg") center / toRem(20) no-repeat;
+		pointer-events: none;
+		@media (max-width: $mobileSmall) {
+			left: toRem(10);
+		}
+	}
+	&__input {
+		width: 100%;
+		padding: toRem(12) toRem(20) toRem(12) toRem(52);
+		outline: none;
+		border-radius: toRem(8);
+		background-color: var(--wild-sand);
+		color: var(--secondary);
+		box-shadow: 0 0 toRem(2) toRem(2) transparent;
+		cursor: pointer;
+		transition:
+			background 0.3s ease-in-out,
+			box-shadow 0.3s ease-in-out;
+		&::placeholder {
+			color: inherit;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #e0e0e0;
+			}
+		}
+		&:focus {
+			box-shadow: 0 0 toRem(2) toRem(2) #8b33fdad;
+			background-color: var(--wild-sand);
+			cursor: auto;
+		}
+		@media (max-width: $mobileSmall) {
+			padding: toRem(10) toRem(20) toRem(10) toRem(40);
+		}
+	}
+}

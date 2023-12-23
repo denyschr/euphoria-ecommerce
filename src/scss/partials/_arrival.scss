@@ -1,0 +1,100 @@
+.arrival {
+	@include adaptiveValue("margin-bottom", 95, 60, 0, $containerWidth, 768);
+	&__inner {
+		position: relative;
+		padding: 0 toRem(36);
+		@media (max-width: $mobile) {
+			padding: 0 toRem(28);
+		}
+	}
+}
+
+.card-arrival {
+	&__link {
+		width: 100%;
+		@media (any-hover: hover) {
+			&:hover {
+				.card-arrival__img {
+					&::before {
+						width: 100%;
+					}
+					img {
+						transform: scale(1.1);
+					}
+				}
+				.card-arrival__title {
+					color: var(--purple);
+				}
+			}
+		}
+	}
+	&__img {
+		position: relative;
+		overflow: hidden;
+		border-radius: toRem(12);
+		aspect-ratio: 262 / 262;
+		&:not(:last-child) {
+			margin-bottom: toRem(33);
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 0;
+			background-color: rgba(255, 255, 255, 0.3);
+			transition: width 0.3s ease-in-out;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			transform: scale(1.0001);
+			transition: transform 0.3s ease-in-out;
+		}
+	}
+	&__title {
+		color: var(--primary);
+		@include adaptiveValue("font-size", 20, 18, 0, $containerWidth, 992);
+		font-weight: 700;
+		letter-spacing: toRem(0.2);
+		line-height: 1.4;
+		transition: color 0.3s ease-in-out;
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+		@media (max-width: $mobileSmall) {
+			@include adaptiveValue("font-size", 20, 18, 0, 479.98, 320);
+		}
+	}
+}
+
+.nav-arrival {
+	&__button {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		svg path {
+			transition: stroke 0.3s ease-in-out;
+		}
+		&.swiper-button-disabled {
+			pointer-events: none;
+			opacity: 0.6;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				svg path {
+					stroke: var(--purple);
+				}
+			}
+		}
+	}
+	&__button--prev {
+		left: 0;
+		transform: rotate(180deg);
+	}
+	&__button--next {
+		right: 0;
+	}
+}

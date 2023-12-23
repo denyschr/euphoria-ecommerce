@@ -1,0 +1,13 @@
+@import "./mixins/adaptive-value";
+@import "./mixins/to-rem";
+@import "./mixins/to-em";
+
+@mixin blackout {
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		inset: 0;
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+}

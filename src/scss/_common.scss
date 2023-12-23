@@ -1,0 +1,90 @@
+.title {
+	color: var(--primary);
+	font-family: $fontSecondary, sans-serif;
+	font-weight: 700;
+	letter-spacing: toRem(0.68);
+	line-height: 1.4;
+}
+
+.title--fs-34 {
+	@include adaptiveValue("font-size", 34, 24, 0, $containerWidth, 480);
+}
+
+.title--fs-28 {
+	font-size: toRem(28);
+}
+
+.title--offset {
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 70, 40, 0, $containerWidth, 992);
+	}
+}
+
+.title--decor {
+	position: relative;
+	padding-left: toRem(26);
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: toRem(6);
+		height: 70%;
+		border-radius: toRem(4);
+		background-color: var(--purple);
+	}
+}
+
+.is-glitch {
+	position: relative;
+	z-index: 2;
+	&::before,
+	&::after {
+		content: attr(data-content);
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0;
+	}
+	&::before {
+		color: #ff00ff;
+		z-index: -1;
+	}
+	&::after {
+		color: #00ffff;
+		z-index: -2;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			&::before {
+				opacity: 1;
+				animation: glitchy 0.3s ease infinite;
+			}
+			&::after {
+				opacity: 1;
+				animation: glitchy 0.3s ease 0.15s infinite reverse;
+			}
+		}
+	}
+}
+
+@keyframes glitchy {
+	0% {
+		transform: translate(toRem(-1.5), toRem(1.5));
+	}
+	25% {
+		transform: translate(toRem(-1.5), toRem(-1.5));
+	}
+	50% {
+		transform: translate(toRem(1.5), toRem(1.5));
+	}
+	75% {
+		transform: translate(toRem(1.5), toRem(-1.5));
+	}
+	100% {
+		transform: translate(toRem(-1.5), toRem(1.5));
+	}
+}
