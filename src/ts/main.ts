@@ -4,12 +4,12 @@ import './libs/dynamic-adaptive';
 import './components/slider';
 // import './libs/select';
 import './libs/spoilers';
-import preloader from './components/preloader';
+// import preloader from './components/preloader';
 import menuInit from './components/menu';
 import goToTopInit from './components/go-to-top';
-// import rangeInit from './components/range';
+import rangeInit from './components/range';
 
-preloader();
+// preloader();
 menuInit();
 goToTopInit();
-// rangeInit();
+rangeInit();

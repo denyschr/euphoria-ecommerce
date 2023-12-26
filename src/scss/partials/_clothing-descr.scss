@@ -1,0 +1,47 @@
+.clothing-descr {
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 15, 0, $containerWidth, 479.98);
+		}
+	}
+	&__text {
+		display: grid;
+		@include adaptiveValue("gap", 20, 10, 0, $containerWidth, 479.98);
+		line-height: 1.4;
+		color: var(--secondary);
+		letter-spacing: toRem(0.4);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		h3 {
+			@include adaptiveValue("font-size", 20, 18, 0, $containerWidth, 479.98);
+			font-family: $fontSecondary, sans-serif;
+			font-weight: 700;
+		}
+		p {
+			@include adaptiveValue("font-size", 20, 16, 0, $containerWidth, 479.98);
+			line-height: 1.4;
+			letter-spacing: toRem(0.4);
+		}
+		span {
+			font-weight: 700;
+		}
+	}
+	&__link {
+		color: var(--secondary);
+		font-family: $fontSecondary, sans-serif;
+		font-size: toRem(20);
+		font-weight: 700;
+		line-height: 1.4;
+		letter-spacing: toRem(0.4);
+		transition: color 0.3s ease-in-out;
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--purple);
+			}
+		}
+	}
+}

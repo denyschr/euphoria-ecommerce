@@ -117,71 +117,77 @@ const resizableSlider = (
 	checker();
 };
 
-resizableSlider(
-	'(max-width: 991.98px)',
-	'.category__slider--men',
-	{
-		freeMode: true,
-		spaceBetween: 20,
-		breakpoints: {
-			768: {
-				slidesPerView: 3.6,
-			},
-			640: {
-				slidesPerView: 3,
-			},
-			480: {
-				slidesPerView: 2.4,
-			},
-			320: {
-				slidesPerView: 1.5,
+if (document.querySelector('.category__slider--men')) {
+	resizableSlider(
+		'(max-width: 991.98px)',
+		'.category__slider--men',
+		{
+			freeMode: true,
+			spaceBetween: 20,
+			breakpoints: {
+				768: {
+					slidesPerView: 3.6,
+				},
+				640: {
+					slidesPerView: 3,
+				},
+				480: {
+					slidesPerView: 2.4,
+				},
+				320: {
+					slidesPerView: 1.5,
+				}
 			}
-		}
-	},
-);
+		},
+	);
+}
 
-resizableSlider(
-	'(max-width: 991.98px)',
-	'.category__slider--women',
-	{
-		spaceBetween: 20,
-		freeMode: true,
-		breakpoints: {
-			768: {
-				slidesPerView: 3.6,
-			},
-			640: {
-				slidesPerView: 3,
-			},
-			480: {
-				slidesPerView: 2.4,
-			},
-			320: {
-				slidesPerView: 1.5,
+if (document.querySelector('.category__slider--women')) {
+	resizableSlider(
+		'(max-width: 991.98px)',
+		'.category__slider--women',
+		{
+			spaceBetween: 20,
+			freeMode: true,
+			breakpoints: {
+				768: {
+					slidesPerView: 3.6,
+				},
+				640: {
+					slidesPerView: 3,
+				},
+				480: {
+					slidesPerView: 2.4,
+				},
+				320: {
+					slidesPerView: 1.5,
+				}
 			}
-		}
-	},
-);
+		},
+	);
+}
 
-resizableSlider(
-	'(max-width: 991.98px)',
-	'.limelight__slider',
-	{
-		freeMode: true,
-		spaceBetween: 20,
-		breakpoints: {
-			768: {
-				slidesPerView: 3.6,
-			},
-			640: {
-				slidesPerView: 3,
-			},
-			480: {
-				slidesPerView: 2.4,
-			},
-			320: {
-				slidesPerView: 1.5,
+if (document.querySelector('.limelight__slider')) {
+	resizableSlider(
+		'(max-width: 991.98px)',
+		'.limelight__slider',
+		{
+			freeMode: true,
+			spaceBetween: 20,
+			breakpoints: {
+				768: {
+					slidesPerView: 3.6,
+				},
+				640: {
+					slidesPerView: 3,
+				},
+				480: {
+					slidesPerView: 2.4,
+				},
+				320: {
+					slidesPerView: 1.5,
+				}
 			}
-		}
-	},
-);
+		},
+	);
+}

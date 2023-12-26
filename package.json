@@ -25,6 +25,7 @@
     "swiper": "^11.0.5",
     "typescript": "^5.2.2",
     "vite": "^5.0.0",
-    "vite-plugin-html-inject": "^1.0.4"
+    "vite-plugin-html-inject": "^1.0.4",
+    "wnumb": "^1.2.0"
   }
 }

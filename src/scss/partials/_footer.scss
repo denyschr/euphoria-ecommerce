@@ -24,7 +24,7 @@
 		@media (max-width: $mobile) {
 			padding-bottom: toRem(37);
 			@include adaptiveValue("padding-bottom", 37, 20, 0, 479.98, 320);
-			border-bottom: toRem(2) solid rgba(190, 188, 189, 0.4);
+			border-bottom: toRem(2) solid var(--dark-gray);
 		}
 		@media (max-width: em(640)) {
 			flex-direction: column-reverse;
@@ -80,9 +80,9 @@
 	&__item {
 		@media (max-width: $mobile) {
 			padding: toRem(26) toRem(32) toRem(26) toRem(5);
-			border-bottom: toRem(2) solid rgba(190, 188, 189, 0.4);
+			border-bottom: toRem(2) solid var(--dark-gray);
 			&:first-child {
-				border-top: toRem(2) solid rgba(190, 188, 189, 0.4);
+				border-top: toRem(2) solid var(--dark-gray);
 			}
 			@media (max-width: $mobileSmall) {
 				padding: toRem(20) toRem(32) toRem(20) toRem(5);
@@ -210,9 +210,9 @@
 	&__item {
 		padding: toRem(26) toRem(32) toRem(26) toRem(70);
 		@include adaptiveValue("padding-left", 70, 5, 0, $containerWidth, 992);
-		border-bottom: toRem(2) solid rgba(190, 188, 189, 0.4);
+		border-bottom: toRem(2) solid var(--dark-gray);
 		&:first-child {
-			border-top: toRem(2) solid rgba(190, 188, 189, 0.4);
+			border-top: toRem(2) solid var(--dark-gray);
 		}
 		@media (max-width: $mobileSmall) {
 			padding: toRem(20) toRem(32) toRem(20) toRem(5);

@@ -1,0 +1,97 @@
+.price {
+	@media (max-width: $mobileSmall) {
+		display: none;
+	}
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 20, 0, $containerWidth, 767.98);
+		}
+	}
+	&__wrapper {
+		@include adaptiveValue("padding-left", 21, 0, 0, $containerWidth, 991.98);
+	}
+}
+
+.table-price {
+	border-radius: toRem(12);
+	background-color: rgba(246, 246, 246, 0.6);
+	&__top {
+		display: grid;
+		grid-template-columns: 6fr 1fr;
+		@include adaptiveValue("column-gap", 50, 10, 0, $containerWidth, 640);
+		@include adaptiveValue("padding-right", 66, 40, 0, $containerWidth, 991.98);
+		@include adaptiveValue("padding-left", 84, 40, 0, $containerWidth, 991.98);
+		border-bottom: toRem(1) solid var(--dark-gray);
+		@media (max-width: $tablet) {
+			grid-template-columns: 4fr 1fr;
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 2fr 1fr;
+		}
+	}
+	&__title {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("padding-top", 50, 30, 0, $containerWidth, 767.98);
+		@include adaptiveValue("padding-bottom", 50, 30, 0, $containerWidth, 767.98);
+		font-family: $fontSecondary, sans-serif;
+		@include adaptiveValue("font-size", 24, 20, 0, $containerWidth, 767.98);
+		font-weight: 700;
+		line-height: 1.39;
+		letter-spacing: toRem(0.48);
+		&:not(:last-child) {
+			padding-right: toRem(15);
+			border-right: toRem(1) solid var(--dark-gray);
+		}
+		&:not(:first-child) {
+			justify-content: center;
+			text-align: center;
+		}
+	}
+	&__body {
+		@include adaptiveValue("padding-right", 66, 40, 0, $containerWidth, 991.98);
+		@include adaptiveValue("padding-left", 84, 40, 0, $containerWidth, 991.98);
+	}
+	&__item {
+		display: grid;
+		grid-template-columns: 6fr 1fr;
+		@include adaptiveValue("column-gap", 50, 10, 0, $containerWidth, 640);
+		&:first-child {
+			.table-price {
+				&__name,
+				&__value {
+					@include adaptiveValue("padding-top", 50, 30, 0, $containerWidth, 767.98);
+				}
+			}
+		}
+		&:last-child {
+			.table-price {
+				&__name,
+				&__value {
+					@include adaptiveValue("padding-bottom", 50, 30, 0, $containerWidth, 767.98);
+				}
+			}
+		}
+		@media (max-width: $tablet) {
+			grid-template-columns: 4fr 1fr;
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 2fr 1fr;
+		}
+	}
+	&__name,
+	&__value {
+		padding: toRem(25) 0;
+		color: var(--secondary);
+		@include adaptiveValue("font-size", 24, 20, 0, $containerWidth, 767.98);
+		line-height: 1.2;
+		letter-spacing: toRem(0.48);
+	}
+	&__name {
+		padding-right: toRem(15);
+		border-right: toRem(1) solid var(--dark-gray);
+	}
+	&__value {
+		text-align: center;
+	}
+}

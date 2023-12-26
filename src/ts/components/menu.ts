@@ -22,7 +22,7 @@ function menuInit() {
 		});
 	}
 
-	window.addEventListener('click', (e: Event): void => {
+	window.addEventListener('click', (e): void => {
 		if (e.target == overlay) destroyMenu();
 	})
 

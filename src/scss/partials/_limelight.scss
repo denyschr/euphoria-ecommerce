@@ -1,5 +1,4 @@
 .limelight {
-	@include adaptiveValue("margin-bottom", 100, 50, 0, $containerWidth, 992);
 	&__wrapper {
 		@media (min-width: $tablet) {
 			display: grid;

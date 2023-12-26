@@ -1,5 +1,4 @@
 .saving {
-	@include adaptiveValue("margin-bottom", 100, 50, 0, $containerWidth, 992);
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
