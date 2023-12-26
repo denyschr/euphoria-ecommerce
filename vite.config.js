@@ -15,5 +15,5 @@ export default defineConfig({
 			}),
 		},
 	],
-	// base: "/euphoria-ecommerce/",
+	base: "/euphoria-ecommerce/",
 });
