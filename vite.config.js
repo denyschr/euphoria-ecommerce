@@ -15,5 +15,13 @@ export default defineConfig({
 			}),
 		},
 	],
+	build: {
+		rollupOptions: {
+			input: {
+				main: './index.html',
+				products: './products.html',
+			}
+		}
+	},
 	base: "/euphoria-ecommerce/",
 });
