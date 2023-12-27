@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Euphoria</title>
+  <script type="module" crossorigin src="/euphoria-ecommerce/assets/main-3pgn6rLI.js"></script>
+  <link rel="stylesheet" crossorigin href="/euphoria-ecommerce/assets/main-PY1LtYEj.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="preloader">
+      <div class="preloader__item"></div>
+    </div>
+		<button type="button" class="go-to-top" aria-label="Go back to top">
+      <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 11.7415L5.73782 7.00373C6.08739 6.65416 6.08739 6.08739 5.73782 5.73782L1 1" stroke="#8A8989" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>        
+    </button>
+    <header class="header-main">
+	<div class="header-main__overlay"></div>
+	<div class="header-main__container">
+		<a href="index.html" class="header-main__logo">
+			<img src="icons/logo.svg" alt="Company Logo">
+		</a>
+		<div class="header-main__menu menu">
+			<nav class="menu__body">
+				<ul class="menu__list">
+					<li class="menu__item"><a href="#" data-content="Shop" class="menu__link menu__link--active is-glitch">Shop</a></li>
+					<li class="menu__item"><a href="#" data-content="Men" class="menu__link is-glitch">Men</a></li>
+					<li class="menu__item"><a href="products.html" data-content="Women" class="menu__link is-glitch">Women</a></li>
+					<li class="menu__item"><a href="#" data-content="Combos" class="menu__link is-glitch">Combos</a></li>
+					<li class="menu__item"><a href="#" data-content="Joggers" class="menu__link is-glitch">Joggers</a></li>
+				</ul>
+				<div class="menu__user-block user-block"></div>
+			</nav>
+			<form action="#" method="GET" class="header-main__form form-search">
+				<input autocomplete="off" type="text" name="form[]" placeholder="Search" class="form-search__input">
+			</form>
+			<div class="header-main__user-block user-block">
+				<a href="#" data-da=".menu__user-block,767.98" class="user-block__item" aria-label="View favorites">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</g>
+					</svg>
+				</a>
+				<a href="#" data-da=".menu__user-block,767.98" class="user-block__item" aria-label="View account">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g>
+							<path d="M9.99992 11.6667C12.3011 11.6667 14.1666 9.8012 14.1666 7.50001C14.1666 5.19882 12.3011 3.33334 9.99992 3.33334C7.69873 3.33334 5.83325 5.19882 5.83325 7.50001C5.83325 9.8012 7.69873 11.6667 9.99992 11.6667ZM9.99992 11.6667C6.31802 11.6667 3.33325 13.9053 3.33325 16.6667M9.99992 11.6667C13.6818 11.6667 16.6666 13.9053 16.6666 16.6667" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round"/>
+							</g>
+					</svg>
+				</a>
+				<a href="#" data-da=".menu__user-block,479.98" class="user-block__item" aria-label="View cart">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g>
+							<path d="M2.5 3.33334H3.00526C3.85578 3.33334 4.56986 3.97376 4.6621 4.81926L5.3379 11.0141C5.43014 11.8596 6.14422 12.5 6.99474 12.5H14.205C14.9669 12.5 15.6317 11.9834 15.82 11.2452L16.9699 6.73593C17.2387 5.68213 16.4425 4.65742 15.355 4.65742H5.5M5.52063 15.5208H6.14563M5.52063 16.1458H6.14563M14.6873 15.5208H15.3123M14.6873 16.1458H15.3123M6.66667 15.8333C6.66667 16.2936 6.29357 16.6667 5.83333 16.6667C5.3731 16.6667 5 16.2936 5 15.8333C5 15.3731 5.3731 15 5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333ZM15.8333 15.8333C15.8333 16.2936 15.4602 16.6667 15 16.6667C14.5398 16.6667 14.1667 16.2936 14.1667 15.8333C14.1667 15.3731 14.5398 15 15 15C15.4602 15 15.8333 15.3731 15.8333 15.8333Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round"/>
+						</g>
+					</svg>						
+				</a>
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+			</div>
+		</div>
+	</div>
+</header> 
+    <main class="page">
+			<section class="page__catalog catalog section-offset">
+	<div class="catalog__container">
+		<div data-spoilers="767.98,max" class="catalog__filter filter-catalog">
+			<button tabindex="-1" type="button" data-spoiler class="filter-catalog__title filter-catalog__title--main">Filter</button>
+			<div class="filter-catalog__content">
+				<ul data-spoilers class="filter-catalog__categories">
+					<li class="filter-catalog__category category-filter">
+						<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Tops</button>
+						<div class="category-filter__body">some content</div>
+					</li>
+					<li class="filter-catalog__category category-filter">
+						<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Printed T-shirts</button>
+						<div class="category-filter__body">some content</div>
+					</li>
+					<li class="filter-catalog__category category-filter">
+						<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Plain T-shirts</button>
+						<div class="category-filter__body">some content</div>
+					</li>
+					<li class="filter-catalog__category category-filter">
+						<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Kurti</button>
+						<div class="category-filter__body">some content</div>
+					</li>
+					<li class="filter-catalog__category category-filter">
+						<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Boxers</button>
+						<div class="category-filter__body">some content</div>
+					</li>
+					<li class="filter-catalog__category category-filter">
+						<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Full sleeve T-shirts</button>
+						<div class="category-filter__body">some content</div>
+					</li>
+					<li class="filter-catalog__category category-filter">
+						<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Joggers</button>
+						<div class="category-filter__body">some content</div>
+					</li>
+					<li class="filter-catalog__category category-filter">
+						<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Payjamas</button>
+						<div class="category-filter__body">some content</div>
+					</li>
+					<li class="filter-catalog__category category-filter">
+						<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Jeans</button>
+						<div class="category-filter__body">some content</div>
+					</li>
+				</ul>
+				<ul data-spoilers class="filter-catalog__items">
+					<li class="filter-catalog__item">
+						<button tabindex="-1" type="button" data-spoiler class="filter-catalog__title filter-catalog__title--secondary">Price</button>
+						<div class="filter-catalog__body filter-catalog__body--price">
+							<div data-range class="filter-catalog__price price-filter">
+								<div data-range-slider class="price-filter__range"></div>
+								<div class="price-filter__inputs">
+									<input data-range-from="70" autocomplete="off" type="text" value="70" name="form[]" class="price-filter__input">
+									<input data-range-to="600" autocomplete="off" type="text" value="600" name="form[]" class="price-filter__input">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="filter-catalog__item">
+						<button tabindex="-1" type="button" data-spoiler class="filter-catalog__title filter-catalog__title--secondary">Colors</button>
+						<div class="filter-catalog__body filter-catalog__body--color">
+							<ul class="filter-catalog__colors">
+								<li class="filter-catalog__color">
+									<div class="filter-catalog__checkbox color-checkbox">
+										<input id="purple" name="form[]" type="checkbox" class="color-checkbox__input">
+										<label for="purple" class="color-checkbox__label color-checkbox__label--purple">Purple</label>
+									</div>
+								</li>
+								<li class="filter-catalog__color">
+									<div class="filter-catalog__checkbox color-checkbox">
+										<input id="black" name="form[]" type="checkbox" class="color-checkbox__input">
+										<label for="black" class="color-checkbox__label color-checkbox__label--black">Black</label>
+									</div>
+								</li>
+								<li class="filter-catalog__color">
+									<div class="filter-catalog__checkbox color-checkbox">
+										<input id="red" name="form[]" type="checkbox" class="color-checkbox__input">
+										<label for="red" class="color-checkbox__label color-checkbox__label--red">Red</label>
+									</div>
+								</li>
+								<li class="filter-catalog__color">
+									<div class="filter-catalog__checkbox color-checkbox">
+										<input id="orange" name="form[]" type="checkbox" class="color-checkbox__input">
+										<label for="orange" class="color-checkbox__label color-checkbox__label--orange">Orange</label>
+									</div>
+								</li>
+								<li class="filter-catalog__color">
+									<div class="filter-catalog__checkbox color-checkbox">
+										<input id="navy" name="form[]" type="checkbox" class="color-checkbox__input">
+										<label for="navy" class="color-checkbox__label color-checkbox__label--navy">Navy</label>
+									</div>
+								</li>
+								<li class="filter-catalog__color">
+									<div class="filter-catalog__checkbox color-checkbox">
+										<input id="white" name="form[]" type="checkbox" class="color-checkbox__input">
+										<label for="white" class="color-checkbox__label color-checkbox__label--white">White</label>
+									</div>
+								</li>
+								<li class="filter-catalog__color">
+									<div class="filter-catalog__checkbox color-checkbox">
+										<input id="broom" name="form[]" type="checkbox" class="color-checkbox__input">
+										<label for="broom" class="color-checkbox__label color-checkbox__label--broom">Broom</label>
+									</div>
+								</li>
+								<li class="filter-catalog__color">
+									<div class="filter-catalog__checkbox color-checkbox">
+										<input id="green" name="form[]" type="checkbox" class="color-checkbox__input">
+										<label for="green" class="color-checkbox__label color-checkbox__label--green">Green</label>
+									</div>
+								</li>
+								<li class="filter-catalog__color">
+									<div class="filter-catalog__checkbox color-checkbox">
+										<input id="yellow" name="form[]" type="checkbox" class="color-checkbox__input">
+										<label for="yellow" class="color-checkbox__label color-checkbox__label--yellow">Yellow</label>
+									</div>
+								</li>
+								<li class="filter-catalog__color">
+									<div class="filter-catalog__checkbox color-checkbox">
+										<input id="grey" name="form[]" type="checkbox" class="color-checkbox__input">
+										<label for="grey" class="color-checkbox__label color-checkbox__label--grey">Grey</label>
+									</div>
+								</li>
+								<li class="filter-catalog__color">
+									<div class="filter-catalog__checkbox color-checkbox">
+										<input id="pink" name="form[]" type="checkbox" class="color-checkbox__input">
+										<label for="pink" class="color-checkbox__label color-checkbox__label--pink">Pink</label>
+									</div>
+								</li>
+								<li class="filter-catalog__color">
+									<div class="filter-catalog__checkbox color-checkbox">
+										<input id="blue" name="form[]" type="checkbox" class="color-checkbox__input">
+										<label for="blue" class="color-checkbox__label color-checkbox__label--blue">Blue</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="filter-catalog__item">
+						<button tabindex="-1" type="button" data-spoiler class="filter-catalog__title filter-catalog__title--secondary">Size</button>
+						<div class="filter-catalog__body filter-catalog__body--size">
+							<ul class="filter-catalog__sizes">
+								<li class="filter-catalog__size">
+									<div class="filter-catalog__checkbox size-checkbox">
+										<input id="xxs" name="form[]" type="checkbox" class="size-checkbox__input">
+										<label for="xxs" class="size-checkbox__label">XXS</label>
+									</div>
+								</li>
+								<li class="filter-catalog__size">
+									<div class="filter-catalog__checkbox size-checkbox">
+										<input id="xl" name="form[]" type="checkbox" class="size-checkbox__input">
+										<label for="xl" class="size-checkbox__label">XL</label>
+									</div>
+								</li>
+								<li class="filter-catalog__size">
+									<div class="filter-catalog__checkbox size-checkbox">
+										<input id="xs" name="form[]" type="checkbox" class="size-checkbox__input">
+										<label for="xs" class="size-checkbox__label">XS</label>
+									</div>
+								</li>
+								<li class="filter-catalog__size">
+									<div class="filter-catalog__checkbox size-checkbox">
+										<input id="s" name="form[]" type="checkbox" class="size-checkbox__input">
+										<label for="s" class="size-checkbox__label">S</label>
+									</div>
+								</li>
+								<li class="filter-catalog__size">
+									<div class="filter-catalog__checkbox size-checkbox">
+										<input id="m" name="form[]" type="checkbox" class="size-checkbox__input">
+										<label for="m" class="size-checkbox__label">M</label>
+									</div>
+								</li>
+								<li class="filter-catalog__size">
+									<div class="filter-catalog__checkbox size-checkbox">
+										<input id="l" name="form[]" type="checkbox" class="size-checkbox__input">
+										<label for="l" class="size-checkbox__label">L</label>
+									</div>
+								</li>
+								<li class="filter-catalog__size">
+									<div class="filter-catalog__checkbox size-checkbox">
+										<input id="xxl" name="form[]" type="checkbox" class="size-checkbox__input">
+										<label for="xxl" class="size-checkbox__label">XXL</label>
+									</div>
+								</li>
+								<li class="filter-catalog__size">
+									<div class="filter-catalog__checkbox size-checkbox">
+										<input id="3xl" name="form[]" type="checkbox" class="size-checkbox__input">
+										<label for="3xl" class="size-checkbox__label">3XL</label>
+									</div>
+								</li>
+								<li class="filter-catalog__size">
+									<div class="filter-catalog__checkbox size-checkbox">
+										<input id="4xl" name="form[]" type="checkbox" class="size-checkbox__input">
+										<label for="4xl" class="size-checkbox__label">4XL</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="filter-catalog__item">
+						<button tabindex="-1" type="button" data-spoiler class="filter-catalog__title filter-catalog__title--secondary">Dress Style</button>
+						<div class="filter-catalog__body filter-catalog__body--category">
+							<ul data-spoilers class="filter-catalog__categories">
+								<li class="filter-catalog__category category-filter">
+									<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Classic</button>
+									<div class="category-filter__body">some content</div>
+								</li>
+								<li class="filter-catalog__category category-filter">
+									<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Casual</button>
+									<div class="category-filter__body">some content</div>
+								</li>
+								<li class="filter-catalog__category category-filter">
+									<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Plain T-shirts</button>
+									<div class="category-filter__body">some content</div>
+								</li>
+								<li class="filter-catalog__category category-filter">
+									<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Business</button>
+									<div class="category-filter__body">some content</div>
+								</li>
+								<li class="filter-catalog__category category-filter">
+									<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Boxers</button>
+									<div class="category-filter__body">some content</div>
+								</li>
+								<li class="filter-catalog__category category-filter">
+									<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Sport</button>
+									<div class="category-filter__body">some content</div>
+								</li>
+								<li class="filter-catalog__category category-filter">
+									<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Elegant</button>
+									<div class="category-filter__body">some content</div>
+								</li>
+								<li class="filter-catalog__category category-filter">
+									<button tabindex="-1" type="button" data-spoiler class="category-filter__title">Formal (evening)</button>
+									<div class="category-filter__body">some content</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="catalog__content">
+			 <div class="catalog__top">
+				<h2 class="catalog__title label-catalog">Women’s Clothing</h2>
+				<div class="catalog__control">
+					<div class="catalog__radio radio-catalog">
+						<input id="new" name="form[]" type="radio" class="radio-catalog__input" checked>
+						<label for="new" class="radio-catalog__label label-catalog">New</label>
+					</div>
+					<div class="catalog__radio radio-catalog">
+						<input id="recommended" name="form[]" type="radio" class="radio-catalog__input">
+						<label for="recommended" class="radio-catalog__label label-catalog">Recommended</label>
+					</div>
+				</div>
+			 </div>
+			 <ul class="catalog__items">
+				<li class="catalog__item">
+					<article class="catalog__product-card card-product">
+						<button class="card-product__button" aria-label="Add to favorite">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<a href="#" class="card-product__link">
+							<div class="card-product__img">
+								<img src="img/product-01.webp" srcset="img/product-01.webp 1x, img/product-01_2x.webp 2x" alt="Black Sweatshirt with lorem ipsum">
+							</div>
+							<div class="card-product__info">
+								<div class="card-product__block">
+									<h3 class="card-product__title">Black Sweatshirt with lorem ipsum</h3>
+									<h4 class="card-product__subtitle">Jhanvi’s  Brand</h4>
+								</div>
+								<div class="card-product__price">$123.00</div>
+							</div>
+						</a>
+					</article>
+				</li>
+				<li class="catalog__item">
+					<article class="catalog__product-card card-product">
+						<button class="card-product__button" aria-label="Add to favorite">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<a href="#" class="card-product__link">
+							<div class="card-product__img">
+								<img src="img/product-05.webp" srcset="img/product-05.webp 1x, img/product-05_2x.webp 2x" alt="White T-shirt">
+							</div>
+							<div class="card-product__info">
+								<div class="card-product__block">
+									<h3 class="card-product__title">White T-shirt</h3>
+									<h4 class="card-product__subtitle">Helen’s  Brand</h4>
+								</div>
+								<div class="card-product__price">$11.00</div>
+							</div>
+						</a>
+					</article>
+				</li>
+				<li class="catalog__item">
+					<article class="catalog__product-card card-product">
+						<button class="card-product__button" aria-label="Add to favorite">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<a href="#" class="card-product__link">
+							<div class="card-product__img">
+								<img src="img/product-04.webp" srcset="img/product-04.webp 1x, img/product-04_2x.webp 2x" alt="Levender Hoodie with lorem ipsum">
+							</div>
+							<div class="card-product__info">
+								<div class="card-product__block">
+									<h3 class="card-product__title">Levender Hoodie with lorem ipsum</h3>
+									<h4 class="card-product__subtitle">Nike’s  Brand</h4>
+								</div>
+								<div class="card-product__price">$119.00</div>
+							</div>
+						</a>
+					</article>
+				</li>
+				<li class="catalog__item">
+					<article class="catalog__product-card card-product">
+						<button class="card-product__button" aria-label="Add to favorite">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<a href="#" class="card-product__link">
+							<div class="card-product__img">
+								<img src="img/product-06.webp" srcset="img/product-06.webp 1x, img/product-06_2x.webp 2x" alt="Leaves Pattern White with lorem ipsum">
+							</div>
+							<div class="card-product__info">
+								<div class="card-product__block">
+									<h3 class="card-product__title">Leaves Pattern White with lorem ipsum</h3>
+									<h4 class="card-product__subtitle">Paypal’s Brand</h4>
+								</div>
+								<div class="card-product__price">$119.00</div>
+							</div>
+						</a>
+					</article>
+				</li>
+				<li class="catalog__item">
+					<div class="catalog__slide swiper-slide">
+						<article class="catalog__product-card card-product">
+							<button class="card-product__button" aria-label="Add to favorite">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<a href="#" class="card-product__link">
+								<div class="card-product__img">
+									<img src="img/product-07.webp" srcset="img/product-07.webp 1x, img/product-07_2x.webp 2x" alt="White Graphic Crop Top">
+								</div>
+								<div class="card-product__info">
+									<div class="card-product__block">
+										<h3 class="card-product__title">White Graphic Crop Top</h3>
+										<h4 class="card-product__subtitle">Woden’s Brand</h4>
+									</div>
+									<div class="card-product__price">$29.00</div>
+								</div>
+							</a>
+						</article>
+					</div> 
+				</li>
+				<li class="catalog__item">
+					<article class="catalog__product-card card-product">
+						<button class="card-product__button" aria-label="Add to favorite">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<a href="#" class="card-product__link">
+							<div class="card-product__img">
+								<img src="img/product-03.webp" srcset="img/product-03.webp 1x, img/product-03_2x.webp 2x" alt="Black Shorts">
+							</div>
+							<div class="card-product__info">
+								<div class="card-product__block">
+									<h3 class="card-product__title">Black Shorts</h3>
+									<h4 class="card-product__subtitle">MM’s Brand</h4>
+								</div>
+								<div class="card-product__price">$37.00</div>
+							</div>
+						</a>
+					</article>
+				</li>
+				<li class="catalog__item">
+					<article class="catalog__product-card card-product">
+						<button class="card-product__button" aria-label="Add to favorite">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<a href="#" class="card-product__link">
+							<div class="card-product__img">
+								<img src="img/product-08.webp" srcset="img/product-08.webp 1x, img/product-08_2x.webp 2x" alt="Barboreal Gray Sweats with lorem ipsum">
+							</div>
+							<div class="card-product__info">
+								<div class="card-product__block">
+									<h3 class="card-product__title">Barboreal Gray Sweats with lorem ipsum</h3>
+									<h4 class="card-product__subtitle">Priya’s Brand</h4>
+								</div>
+								<div class="card-product__price">$77.00</div>
+							</div>
+						</a>
+					</article>
+				</li>
+				<li class="catalog__item">
+					<article class="catalog__product-card card-product">
+						<button class="card-product__button" aria-label="Add to favorite">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<a href="#" class="card-product__link">
+							<div class="card-product__img">
+								<img src="img/product-09.webp" srcset="img/product-09.webp 1x, img/product-09_2x.webp 2x" alt="Yellow Sweatshirt">
+							</div>
+							<div class="card-product__info">
+								<div class="card-product__block">
+									<h3 class="card-product__title">Yellow Sweatshirt</h3>
+									<h4 class="card-product__subtitle">Woden’s Brand</h4>
+								</div>
+								<div class="card-product__price">$29.00</div>
+							</div>
+						</a>
+					</article>
+				</li>
+				<li class="catalog__item">
+					<article class="catalog__product-card card-product">
+						<button class="card-product__button" aria-label="Add to favorite">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<a href="#" class="card-product__link">
+							<div class="card-product__img">
+								<img src="img/product-10.webp" srcset="img/product-10.webp 1x, img/product-10_2x.webp 2x" alt="Flower Pattern Black With lorem ipsum">
+							</div>
+							<div class="card-product__info">
+								<div class="card-product__block">
+									<h3 class="card-product__title">Flower Pattern Black With lorem ipsum</h3>
+									<h4 class="card-product__subtitle">MM’s Brand</h4>
+								</div>
+								<div class="card-product__price">$37.00</div>
+							</div>
+						</a>
+					</article>
+				</li>
+				<li class="catalog__item">
+					<article class="catalog__product-card card-product">
+						<button class="card-product__button" aria-label="Add to favorite">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<a href="#" class="card-product__link">
+							<div class="card-product__img">
+								<img src="img/product-11.webp" srcset="img/product-11.webp 1x, img/product-11_2x.webp 2x" alt="I Don’t Graphic T-shirt">
+							</div>
+							<div class="card-product__info">
+								<div class="card-product__block">
+									<h3 class="card-product__title">I Don’t Graphic T-shirt</h3>
+									<h4 class="card-product__subtitle">Nisargi’s Brand</h4>
+								</div>
+								<div class="card-product__price">$77.00</div>
+							</div>
+						</a>
+					</article>
+				</li>
+				<li class="catalog__item">
+					<article class="catalog__product-card card-product">
+						<button class="card-product__button" aria-label="Add to favorite">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<a href="#" class="card-product__link">
+							<div class="card-product__img">
+								<img src="img/product-12.webp" srcset="img/product-12.webp 1x, img/product-12_2x.webp 2x" alt="Blue Flower Print Crop with lorem ipsum">
+							</div>
+							<div class="card-product__info">
+								<div class="card-product__block">
+									<h3 class="card-product__title">Blue Flower Print Crop with lorem ipsum</h3>
+									<h4 class="card-product__subtitle">Mellon’s Brand</h4>
+								</div>
+								<div class="card-product__price">$29.00</div>
+							</div>
+						</a>
+					</article>
+				</li>
+				<li class="catalog__item">
+					<article class="catalog__product-card card-product">
+						<button class="card-product__button" aria-label="Add to favorite">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<a href="#" class="card-product__link">
+							<div class="card-product__img">
+								<img src="img/product-02.webp" srcset="img/product-02.webp 1x, img/product-02_2x.webp 2x" alt="Line Pattern Black Hat with lorem ipsum">
+							</div>
+							<div class="card-product__info">
+								<div class="card-product__block">
+									<h3 class="card-product__title">Line Pattern Black Hat with lorem ipsum</h3>
+									<h4 class="card-product__subtitle">AS’s Brand</h4>
+								</div>
+								<div class="card-product__price">$37.00</div>
+							</div>
+						</a>
+					</article>
+				</li>
+			 </ul>
+		</div>
+	</div>
+</section>
+			<section class="page__clothing-descr clothing-descr section-offset">
+	<div class="clothing-descr__container">
+		<h2 class="clothing-descr__title title title--fs-28 title--decor">Clothing for Women Online in India</h2>
+		<div class="clothing-descr__text">
+			<h3>Reexplore Women's Clothing Collection Online at Euphoria</h3>
+			<p>Women's Clothing - Are you searching for the best website to buy Clothing for Women online in India? Well, your search for the coolest and most stylish womens clothing ends here. From trendy Casual Womens Wear Online shopping to premium quality cotton women's apparel, <span>Euphoria</span> has closet of Women Collection covered with the latest and best designs of Women's Clothing Online.</p>
+			<p>Our collection of clothes for women will make you the trendsetter with an iconic resemblance of choice in Womens Wear. </p>
+			<h3>One-Stop Destination to Shop Every Clothing for Women: Euphoria</h3>
+			<p>Today, Clothing for Women is gaining more popularity above all. This is because gone are the days when women were used to carrying uncomfortable fashion. Today, a lady looks prettier when she is in Casual Womens Wear which is a comfortable outfit. Concerning this, <span>Euphoria</span> has a big fat range of Stylish Women's Clothing that would make her the winner wherever she goes. </p>
+			<p>Our collection of clothes for women will make you the trendsetter with an iconic resemblance of choice in Womens Wear. It is quite evident to say that there are very few Womens Clothing online stores where you can buy Western Wear for Women comprising the premium material and elegant design that you are always seeking for. Basically, </p>
+		</div>
+		<a href="#" class="clothing-descr__link">See More</a>
+	</div>
+</section>
+			<section class="page__price price section-offset">
+	<div class="price__container">
+		<h2 class="price__title title title--fs-28 title--decor">Buy Women's Clothing at Best Price</h2>
+		<div class="price__wrapper">
+			<div class="price__table table-price">
+				<div class="table-price__top">
+					<h3 class="table-price__title">Women's Clothing</h3>
+					<h3 class="table-price__title">Best Price</h3>
+				</div>
+				<ul class="table-price__body">
+					<li class="table-price__item">
+						<div class="table-price__name">Pick Any 4- Womens Plain T-shirt Combo</div>
+						<div class="table-price__value">$1099</div>
+					</li>
+					<li class="table-price__item">
+						<div class="table-price__name">Pick Any 4- Plain Womens Boxer Combo</div>
+						<div class="table-price__value">$1099</div>
+					</li>
+					<li class="table-price__item">
+						<div class="table-price__name">Pick Any 4 - Women Plain Full Sleeve T-shirt Combo</div>
+						<div class="table-price__value">$1399</div>
+					</li>
+					<li class="table-price__item">
+						<div class="table-price__name">Multicolor Checkered Long Casual Shirts for Women</div>
+						<div class="table-price__value">$499</div>
+					</li>
+					<li class="table-price__item">
+						<div class="table-price__name">Pick Any 2: Plain Boxy Casual Shirts for Women Combo</div>
+						<div class="table-price__value">$799</div>
+					</li>
+					<li class="table-price__item">
+						<div class="table-price__name">Blue Floral Anarkali Kurti</div>
+						<div class="table-price__value">$599</div>
+					</li>
+					<li class="table-price__item">
+						<div class="table-price__name">Jade Black Narrow Cut Flexible Women Jeggings</div>
+						<div class="table-price__value">$998</div>
+					</li>
+					<li class="table-price__item">
+						<div class="table-price__name">Mustard-yellow Solid Straight-Fit Women Pant</div>
+						<div class="table-price__value">$499</div>
+					</li>
+					<li class="table-price__item">
+						<div class="table-price__name">Women Pants Combo - Pick Any 2</div>
+						<div class="table-price__value">$800</div>
+					</li>
+					<li class="table-price__item">
+						<div class="table-price__name">Pista Green Solid Boxy Casual Shirts for Women</div>
+						<div class="table-price__value">$449</div>
+					</li>
+					<li class="table-price__item">
+						<div class="table-price__name">Plain Burgundy Womens Boxer</div>
+						<div class="table-price__value">$349</div>
+					</li>
+					<li class="table-price__item">
+						<div class="table-price__name">Striped Front Tie Casual Shirts for Women</div>
+						<div class="table-price__value">$449</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+    </main>
+    <footer class="footer">
+	<div class="footer__container">
+		<div class="footer__main">
+			<ul data-spoilers="767.98,max" class="footer__menu menu-footer">
+				<li class="menu-footer__item">
+					<button tabindex="-1" type="button" data-spoiler class="menu-footer__title title-footer">
+						Need Help
+					</button>
+					<div class="menu-footer__body">
+						<ul>
+							<li>
+								<a href="#" data-content="Contact Us" class="is-glitch">Contact Us</a>
+							</li>
+							<li>
+								<a href="#" data-content="Track Order" class="is-glitch">Track Order</a>
+							</li>
+							<li>
+								<a href="#" data-content="Returns & Refunds" class="is-glitch">Returns & Refunds</a>
+							</li>
+							<li>
+								<a href="#" data-content="FAQ's" class="is-glitch">FAQ's</a>
+							</li>
+							<li>
+								<a href="#" data-content="Career" class="is-glitch">Career</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu-footer__item">
+					<button tabindex="-1" type="button" data-spoiler class="menu-footer__title title-footer">
+						Company
+					</button>
+					<div class="menu-footer__body">
+						<ul>
+							<li>
+								<a href="#" data-content="About Us" class="is-glitch">About Us</a>
+							</li>
+							<li>
+								<a href="#" data-content="Euphoria Blog" class="is-glitch">Euphoria Blog</a>
+							</li>
+							<li>
+								<a href="#" data-content="Euphoriastan" class="is-glitch">Euphoriastan</a>
+							</li>
+							<li>
+								<a href="#" data-content="Collaboration" class="is-glitch">Collaboration</a>
+							</li>
+							<li>
+								<a href="#" data-content="Media" class="is-glitch">Media</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu-footer__item">
+					<button tabindex="-1" type="button" data-spoiler class="menu-footer__title title-footer">
+						More Info
+					</button>
+					<div class="menu-footer__body">
+						<ul>
+							<li>
+								<a href="#" data-content="Term and Conditions" class="is-glitch">Term and Conditions</a>
+							</li>
+							<li>
+								<a href="#" data-content="Privacy Policy" class="is-glitch">Privacy Policy</a>
+							</li>
+							<li>
+								<a href="#" data-content="Shipping Policy" class="is-glitch">Shipping Policy</a>
+							</li>
+							<li>
+								<a href="#" data-content="Sitemap" class="is-glitch">Sitemap</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu-footer__item">
+					<button tabindex="-1" type="button" data-spoiler class="menu-footer__title title-footer">
+						Location
+					</button>
+					<div class="menu-footer__body">
+						<ul>
+							<li>
+								<a href="mailto:support@euphoria.in" data-content="support@euphoria.in" class="is-glitch">support@euphoria.in</a>
+							</li>
+							<li>
+								Eklingpura Chouraha, Ahmedabad Main Road
+							</li>
+							<li>
+								(NH 8- Near Mahadev Hotel) Udaipur, India- 313002
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<div class="footer__extra">
+				<div class="footer__social social">
+					<a href="#" target="_blank" class="social__item" aria-label="We are on Facebook">
+						<svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9.43677 10.4627L9.93113 7.24131H6.84012V5.15086C6.84012 4.26955 7.27191 3.41049 8.65628 3.41049H10.0615V0.667828C10.0615 0.667828 8.7863 0.450195 7.56707 0.450195C5.02153 0.450195 3.35765 1.99309 3.35765 4.78616V7.24131H0.528076V10.4627H3.35765V18.2502H6.84012V10.4627H9.43677Z" fill="#2A2F2F"/>
+						</svg>
+					</a>
+					<a href="#" target="_blank" class="social__item" aria-label="We are on Instagram">
+						<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.4657 4.66956C6.25461 4.66956 4.47113 6.45304 4.47113 8.66413C4.47113 10.8752 6.25461 12.6587 8.4657 12.6587C10.6768 12.6587 12.4603 10.8752 12.4603 8.66413C12.4603 6.45304 10.6768 4.66956 8.4657 4.66956ZM8.4657 11.2611C7.03684 11.2611 5.86871 10.0965 5.86871 8.66413C5.86871 7.23179 7.03336 6.06714 8.4657 6.06714C9.89805 6.06714 11.0627 7.23179 11.0627 8.66413C11.0627 10.0965 9.89457 11.2611 8.4657 11.2611ZM13.5554 4.50616C13.5554 5.02417 13.1382 5.43788 12.6237 5.43788C12.1057 5.43788 11.692 5.02069 11.692 4.50616C11.692 3.99163 12.1091 3.57444 12.6237 3.57444C13.1382 3.57444 13.5554 3.99163 13.5554 4.50616ZM16.2011 5.45179C16.142 4.2037 15.8569 3.09815 14.9425 2.18729C14.0317 1.27644 12.9261 0.991357 11.678 0.928779C10.3917 0.855771 6.53621 0.855771 5.24988 0.928779C4.00527 0.987881 2.89973 1.27296 1.98539 2.18382C1.07105 3.09468 0.789453 4.20022 0.726875 5.44831C0.653867 6.73464 0.653867 10.5901 0.726875 11.8765C0.785977 13.1246 1.07105 14.2301 1.98539 15.141C2.89973 16.0518 4.0018 16.3369 5.24988 16.3995C6.53621 16.4725 10.3917 16.4725 11.678 16.3995C12.9261 16.3404 14.0317 16.0553 14.9425 15.141C15.8534 14.2301 16.1385 13.1246 16.2011 11.8765C16.2741 10.5901 16.2741 6.73812 16.2011 5.45179ZM14.5393 13.2567C14.2681 13.9381 13.7431 14.463 13.0582 14.7377C12.0327 15.1444 9.59906 15.0506 8.4657 15.0506C7.33234 15.0506 4.89527 15.141 3.87316 14.7377C3.19176 14.4665 2.6668 13.9416 2.39215 13.2567C1.98539 12.2311 2.07926 9.79749 2.07926 8.66413C2.07926 7.53077 1.98887 5.0937 2.39215 4.07159C2.66332 3.39019 3.18828 2.86522 3.87316 2.59058C4.89875 2.18382 7.33234 2.27769 8.4657 2.27769C9.59906 2.27769 12.0361 2.18729 13.0582 2.59058C13.7396 2.86175 14.2646 3.38671 14.5393 4.07159C14.946 5.09718 14.8521 7.53077 14.8521 8.66413C14.8521 9.79749 14.946 12.2346 14.5393 13.2567Z" fill="#2A2F2F"/>
+						</svg>
+					</a>
+					<a href="#" target="_blank" class="social__item" aria-label="We are on Twitter">
+						<svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16.3463 4.18884C16.3576 4.34695 16.3576 4.5051 16.3576 4.66321C16.3576 9.4859 12.6869 15.0428 5.978 15.0428C3.91112 15.0428 1.99108 14.4441 0.375977 13.4051C0.669642 13.439 0.951973 13.4503 1.25694 13.4503C2.96237 13.4503 4.53231 12.8743 5.78599 11.8916C4.18219 11.8578 2.83815 10.8074 2.37507 9.36168C2.60098 9.39555 2.82685 9.41814 3.06405 9.41814C3.39158 9.41814 3.71914 9.37295 4.02407 9.29393C2.35251 8.95507 1.09879 7.48681 1.09879 5.71359V5.66843C1.58443 5.9395 2.1492 6.10891 2.74776 6.13147C1.76514 5.47638 1.12139 4.35825 1.12139 3.09327C1.12139 2.41562 1.30206 1.79443 1.61833 1.25229C3.41414 3.46599 6.11352 4.91165 9.14039 5.0698C9.08393 4.79873 9.05003 4.5164 9.05003 4.23403C9.05003 2.22361 10.6764 0.585938 12.6981 0.585938C13.7485 0.585938 14.6972 1.02642 15.3636 1.73797C16.1881 1.57985 16.9787 1.27489 17.679 0.857005C17.4079 1.7041 16.8319 2.41565 16.0752 2.8674C16.8093 2.78837 17.5209 2.58503 18.1759 2.3027C17.679 3.02551 17.0578 3.66927 16.3463 4.18884Z" fill="#2A2F2F"/>
+						</svg>							
+					</a>
+					<a href="#" target="_blank" class="social__item" aria-label="We are on Linkedin">
+						<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2.83892 4.43788V13.4658H0.427576V4.43788H2.83892ZM0.277389 2.08494C0.277389 1.73451 0.399764 1.44526 0.644514 1.21719C0.889264 0.989132 1.21745 0.875101 1.62908 0.875101C2.03514 0.875101 2.36055 0.989132 2.6053 1.21719C2.85561 1.44526 2.98076 1.73451 2.98076 2.08494C2.98076 2.43538 2.85561 2.72463 2.6053 2.95269C2.36055 3.18076 2.03514 3.29479 1.62908 3.29479C1.21745 3.29479 0.889264 3.18076 0.644514 2.95269C0.399764 2.72463 0.277389 2.43538 0.277389 2.08494ZM7.51943 6.36529V13.4658H5.11643V4.43788H7.36924L7.51943 6.36529ZM7.16899 8.63479H6.51818C6.51818 7.96729 6.6044 7.36654 6.77684 6.83254C6.94927 6.29298 7.19124 5.83407 7.50274 5.45582C7.81424 5.07201 8.18415 4.77998 8.61246 4.57973C9.04634 4.37391 9.53027 4.27101 10.0643 4.27101C10.487 4.27101 10.8736 4.33219 11.2241 4.45457C11.5745 4.57694 11.8749 4.77163 12.1252 5.03863C12.3811 5.30563 12.5757 5.65885 12.7092 6.09829C12.8483 6.53773 12.9178 7.07451 12.9178 7.70863V13.4658H10.4981V7.70029C10.4981 7.29979 10.4425 6.98829 10.3313 6.76579C10.22 6.54329 10.0559 6.38754 9.83899 6.29854C9.62762 6.20398 9.36618 6.15669 9.05468 6.15669C8.73206 6.15669 8.45115 6.22066 8.21196 6.3486C7.97834 6.47654 7.78365 6.65454 7.6279 6.8826C7.47771 7.1051 7.36368 7.36654 7.28581 7.66691C7.20793 7.96729 7.16899 8.28991 7.16899 8.63479Z" fill="#2A2F2F"/>
+						</svg>
+					</a>
+				</div>
+				<div class="footer__app app">
+					<h2 class="app__title title-footer">Download The App </h2>
+					<div class="app__body">
+						<a href="#" class="app__item app__item--playmarket">
+							<div class="app__block">
+								<span class="app__label">android app on</span>
+								<span class="app__text">Google Play</span>
+							</div>
+						</a>
+						<a href="#" class="app__item app__item--appstore">
+							<div class="app__block">
+								<span class="app__label">Available on the</span>
+								<span class="app__text">App Store</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__subsidiary subsidiary">
+			<ul data-spoilers class="subsidiary__list">
+				<li data-da=".footer__menu,767.98" class="subsidiary__item">
+					<button tabindex="-1" type="button" data-spoiler class="subsidiary__title title-footer">
+						Popular Categories
+					</button>
+					<div class="subsidiary__body">
+						<ul>
+							<li>
+								<a href="#" data-content="In The Limelight" class="is-glitch">In The Limelight</a>
+							</li>
+							<li>
+								<a href="#" data-content="For Women" class="is-glitch">For Women</a>
+							</li>
+							<li>
+								<a href="#" data-content="For men" class="is-glitch">For men</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__copy">
+			<small>Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.</small>
+		</div>
+	</div>
+</footer>
+  </div>
+</body>
+
+</html>
