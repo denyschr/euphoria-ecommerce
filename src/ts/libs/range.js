@@ -1,5 +1,5 @@
 import * as noUiSlider from 'nouislider';
-import * as wNumb from 'wnumb';
+import wNumb from 'wnumb';
 
 const rangeItems = document.querySelectorAll('[data-range]');
 if (rangeItems.length) {
