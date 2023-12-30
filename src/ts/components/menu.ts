@@ -29,12 +29,17 @@ function menuInit() {
 	window.addEventListener('resize', (): void => {
 		if (window.innerWidth > 991.98) destroyMenu();
 	});
-
-	let initialScrollPos: number = window.scrollY;
+	let initialScrollPos: number = 0;
 	window.addEventListener('scroll', (): void => {
 		let currentScrollPos: number = window.scrollY;
-		initialScrollPos >= currentScrollPos ? header.classList.remove('_active') : header.classList.add('_active');
-		currentScrollPos > 0 ? header.classList.add('_scroll') : header.classList.remove('_scroll');
+		if (initialScrollPos > currentScrollPos) {
+			header.classList.remove('_active');
+		} else if (initialScrollPos > header.offsetHeight) {
+			header.classList.add('_active');
+		}
+		if (currentScrollPos === 0) {
+			header.classList.remove('_active');
+		}
 		initialScrollPos = currentScrollPos;
 	});
 }

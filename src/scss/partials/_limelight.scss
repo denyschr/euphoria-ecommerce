@@ -1,9 +1,0 @@
-.limelight {
-	&__wrapper {
-		@media (min-width: $tablet) {
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			@include adaptiveValue("gap", 36, 20, 0, $containerWidth, 992);
-		}
-	}
-}

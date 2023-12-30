@@ -93,23 +93,37 @@ interface SwiperSettings {
 
 const resizableSlider = (
 	breakpoint: string,
-	swiperClass: string,
+	swiperClassNames: string[],
 	swiperSettings?: SwiperSettings,
 ): void => {
-	let swiper: Swiper;
+	const swipers: Record<string, Swiper> = {};
 
 	const breakpointMediaQuery: MediaQueryList = window.matchMedia(breakpoint);
 
-	const enableSwiper = (className: string, settings?: SwiperSettings): void => {
-		swiper = new Swiper(className, settings);
+	const enableSwiper = (swiperClassName: string, settings?: SwiperSettings): void => {
+		const element = document.querySelector(swiperClassName);
+
+		if (element && !swipers[swiperClassName]) {
+			swipers[swiperClassName] = new Swiper(swiperClassName, settings);
+		}
+	};
+
+	const destroySwipers = (): void => {
+		Object.values(swipers).forEach((swiper) => {
+			if (swiper && !swiper.destroyed) {
+				swiper.destroy();
+			}
+		});
+		Object.keys(swipers).forEach((key) => delete swipers[key]);
 	};
 
 	const checker = (): void => {
 		if (breakpointMediaQuery.matches) {
-			return enableSwiper(swiperClass, swiperSettings);
+			swiperClassNames.forEach((swiperClassName) => {
+				enableSwiper(swiperClassName, swiperSettings);
+			});
 		} else {
-			if (swiper !== undefined) swiper.destroy(true, true);
-			return;
+			destroySwipers();
 		}
 	};
 
@@ -117,63 +131,14 @@ const resizableSlider = (
 	checker();
 };
 
-if (document.querySelector('.category__slider--men')) {
+const slidersProducts: NodeListOf<HTMLDivElement> = document.querySelectorAll('.slider-products');
+if (slidersProducts.length) {
 	resizableSlider(
 		'(max-width: 991.98px)',
-		'.category__slider--men',
-		{
-			freeMode: true,
-			spaceBetween: 20,
-			breakpoints: {
-				768: {
-					slidesPerView: 3.6,
-				},
-				640: {
-					slidesPerView: 3,
-				},
-				480: {
-					slidesPerView: 2.4,
-				},
-				320: {
-					slidesPerView: 1.5,
-				}
-			}
-		},
-	);
-}
-
-if (document.querySelector('.category__slider--women')) {
-	resizableSlider(
-		'(max-width: 991.98px)',
-		'.category__slider--women',
+		['.category__slider--men', '.category__slider--women', '.limelight__slider', '.similar-products__slider'],
 		{
 			spaceBetween: 20,
 			freeMode: true,
-			breakpoints: {
-				768: {
-					slidesPerView: 3.6,
-				},
-				640: {
-					slidesPerView: 3,
-				},
-				480: {
-					slidesPerView: 2.4,
-				},
-				320: {
-					slidesPerView: 1.5,
-				}
-			}
-		},
-	);
-}
-
-if (document.querySelector('.limelight__slider')) {
-	resizableSlider(
-		'(max-width: 991.98px)',
-		'.limelight__slider',
-		{
-			freeMode: true,
-			spaceBetween: 20,
 			breakpoints: {
 				768: {
 					slidesPerView: 3.6,

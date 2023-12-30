@@ -20,6 +20,7 @@ export default defineConfig({
 			input: {
 				main: './index.html',
 				products: './products.html',
+				product: './product.html',
 			}
 		}
 	},

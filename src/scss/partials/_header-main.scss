@@ -5,15 +5,10 @@
 	top: 0;
 	width: 100%;
 	background-color: var(--white);
-	border-bottom: toRem(1) solid #bebcbd;
-	transition:
-		top 0.8s ease-in-out,
-		background 0.3s ease-in-out;
+	border-bottom: toRem(1) solid var(--pale-slate);
+	transition: top 0.4s ease-in-out;
 	&._active {
 		top: calc(-1 * toRem(150));
-	}
-	&._scroll {
-		background-color: #ededed;
 	}
 	&__overlay {
 		@extend %overlay;

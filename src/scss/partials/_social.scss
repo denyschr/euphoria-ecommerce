@@ -9,24 +9,15 @@
 		height: toRem(37);
 		border-radius: toRem(12);
 		background-color: var(--wild-sand);
-		transition:
-			background 0.3s ease-in-out,
-			transform 0.3s ease-in-out;
-		svg {
-			transition: transform 0.5s ease-in-out;
-			path {
-				transition: fill 0.3s ease-in-out;
-			}
+		transition: background 0.3s ease-in-out;
+		svg path {
+			transition: fill 0.3s ease-in-out;
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				transform: scale(1.1);
 				background-color: var(--purple);
-				svg {
-					transform: rotate(360deg);
-					path {
-						fill: var(--white);
-					}
+				svg path {
+					fill: var(--white);
 				}
 			}
 		}

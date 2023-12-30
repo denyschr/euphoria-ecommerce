@@ -33,7 +33,7 @@
 	height: 100%;
 	padding: toRem(23);
 	border-radius: toRem(10);
-	border: toRem(2) solid #bebcbd;
+	border: toRem(2) solid var(--pale-slate);
 	background: var(--white);
 	&__top {
 		display: flex;
@@ -74,10 +74,4 @@
 			}
 		}
 	}
-}
-
-.rating {
-	display: flex;
-	align-items: center;
-	gap: toRem(4);
 }

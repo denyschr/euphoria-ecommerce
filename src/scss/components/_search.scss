@@ -28,6 +28,7 @@
 			box-shadow 0.3s ease-in-out;
 		&::placeholder {
 			color: inherit;
+			transition: opacity 0.3s ease-in-out;
 		}
 		@media (any-hover: hover) {
 			&:hover {
@@ -38,6 +39,9 @@
 			box-shadow: 0 0 toRem(2) toRem(2) #8b33fdad;
 			background-color: var(--wild-sand);
 			cursor: auto;
+			&::placeholder {
+				opacity: 0;
+			}
 		}
 		@media (max-width: $mobileSmall) {
 			padding: toRem(10) toRem(20) toRem(10) toRem(40);

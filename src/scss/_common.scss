@@ -18,9 +18,15 @@
 	@include adaptiveValue("font-size", 28, 24, 0, $containerWidth, 479.98);
 }
 
-.title--offset {
+.title--offset-70 {
 	&:not(:last-child) {
 		@include adaptiveValue("margin-bottom", 70, 40, 0, $containerWidth, 992);
+	}
+}
+
+.title--offset-30 {
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 30, 15, 0, $containerWidth, 479.98);
 	}
 }
 
@@ -40,55 +46,11 @@
 	}
 }
 
-.is-glitch {
-	position: relative;
-	z-index: 2;
-	&::before,
-	&::after {
-		content: attr(data-content);
-		position: absolute;
-		left: 0;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		opacity: 0;
-	}
-	&::before {
-		color: #ff00ff;
-		z-index: -1;
-	}
-	&::after {
-		color: #00ffff;
-		z-index: -2;
-	}
-	@media (any-hover: hover) {
-		&:hover {
-			&::before {
-				opacity: 1;
-				animation: glitchy 0.3s ease infinite;
-			}
-			&::after {
-				opacity: 1;
-				animation: glitchy 0.3s ease 0.15s infinite reverse;
-			}
-		}
-	}
-}
-
-@keyframes glitchy {
-	0% {
-		transform: translate(toRem(-1.5), toRem(1.5));
-	}
-	25% {
-		transform: translate(toRem(-1.5), toRem(-1.5));
-	}
-	50% {
-		transform: translate(toRem(1.5), toRem(1.5));
-	}
-	75% {
-		transform: translate(toRem(1.5), toRem(-1.5));
-	}
-	100% {
-		transform: translate(toRem(-1.5), toRem(1.5));
+.grid-slider {
+	@media (min-width: $tablet) {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: toRem(36);
+		row-gap: toRem(50);
 	}
 }

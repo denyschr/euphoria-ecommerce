@@ -4,13 +4,11 @@
 @import "./mixins";
 @import "./vars";
 @import "./base";
-@import "./common";
 @import "./forms";
 @import "./components/go-to-top";
 @import "./components/preloader";
-
-// Libs
 @import "./libs/swiper";
+@import "./common";
 
 // Partials
 @import "./partials/header-main";
@@ -22,10 +20,13 @@
 @import "./partials/category";
 @import "./partials/brands";
 @import "./partials/card-product";
-@import "./partials/limelight";
+@import "./partials/rating";
 @import "./partials/feedback";
 @import "./partials/catalog";
 @import "./partials/clothing-descr";
 @import "./partials/price";
+@import "./partials/product-main";
+@import "./partials/breadcrumbs";
+@import "./partials/product-about";
 @import "./partials/social";
 @import "./partials/footer";
