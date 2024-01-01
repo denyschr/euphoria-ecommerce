@@ -1,0 +1,356 @@
+.cart {
+	@include adaptiveValue("padding-top", 50, 30, 0, $containerWidth, 992);
+	&__top {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 30, 0, $containerWidth, 992);
+		}
+	}
+	&__body {
+		@include adaptiveValue("margin-bottom", 100, 50, 0, $containerWidth, 992);
+	}
+}
+
+.top-cart {
+	&__breadcrumbs {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	&__text {
+		color: var(--secondary);
+		font-size: toRem(14);
+		letter-spacing: toRem(0.28);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		p {
+			&:not(:last-child) {
+				margin-bottom: toRem(5);
+			}
+			a {
+				color: var(--purple);
+				font-weight: 600;
+				transition: color 0.3s ease-in-out;
+				@media (any-hover: hover) {
+					&:hover {
+						color: var(--primary);
+					}
+				}
+			}
+		}
+	}
+}
+
+.body-cart {
+	&__header {
+		padding-top: toRem(26);
+		padding-bottom: toRem(28);
+		background-color: var(--primary);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 70, 30, 0, $containerWidth, 992);
+		}
+	}
+	&__labels {
+		display: grid;
+		grid-template-columns: 2fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr;
+		align-items: center;
+		@include adaptiveValue("column-gap", 60, 30, 0, $containerWidth, 992);
+	}
+	&__label {
+		color: var(--white);
+		font-size: toRem(18);
+		font-weight: 500;
+		text-transform: uppercase;
+		&:not(:first-child) {
+			justify-self: center;
+		}
+	}
+}
+
+.product-cart {
+	display: grid;
+	grid-template-columns: 2fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr;
+	justify-items: center;
+	align-items: center;
+	@include adaptiveValue("gap", 60, 30, 0, $containerWidth, 992);
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 50, 30, 0, $containerWidth, 992);
+		@include adaptiveValue("padding-bottom", 50, 30, 0, $containerWidth, 992);
+		border-bottom: toRem(1) solid var(--pale-slate);
+	}
+	&__details {
+		display: flex;
+		align-items: flex-start;
+		gap: toRem(20);
+	}
+	&__img {
+		aspect-ratio: 105 / 120;
+		flex-basis: toRem(105);
+		flex-shrink: 0;
+		border-radius: toRem(12);
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__descr {
+		padding-top: toRem(6);
+	}
+	&__name {
+		font-size: toRem(18);
+		font-weight: 700;
+		letter-spacing: toRem(0.36);
+		a {
+			transition: color 0.3s ease-in-out;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				a {
+					color: var(--purple);
+				}
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(12);
+		}
+	}
+	&__row {
+		display: flex;
+		align-items: center;
+		gap: toRem(2);
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+	}
+	&__category,
+	&__value,
+	& span {
+		color: var(--secondary);
+		font-size: toRem(14);
+		font-weight: 500;
+	}
+	&__price {
+		font-size: toRem(18);
+		font-weight: 700;
+	}
+	&__shipping {
+		color: var(--pale-slate);
+		font-size: toRem(18);
+		font-weight: 700;
+		letter-spacing: toRem(0.36);
+	}
+	&__remove {
+		svg path {
+			transition: fill 0.3s ease-in-out;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				svg path {
+					fill: var(--primary);
+				}
+			}
+		}
+	}
+}
+
+.quantity-product {
+	display: flex;
+	justify-content: center;
+	gap: toRem(16);
+	padding: toRem(11) toRem(22);
+	border-radius: toRem(12);
+	background: var(--wild-sand);
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		svg path {
+			transition: stroke 0.3s ease-in-out;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				svg path {
+					stroke: var(--purple);
+				}
+			}
+		}
+	}
+	&__value {
+		font-size: toRem(12);
+		font-weight: 500;
+	}
+}
+
+.payment-cart {
+	background-color: var(--wild-sand);
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: toRem(30);
+		padding: 0;
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+	&__discount {
+		padding: toRem(29) 0 toRem(20) toRem(15);
+		@media (max-width: $mobile) {
+			padding: toRem(29) toRem(15) 0 toRem(15);
+		}
+	}
+}
+
+.discount-cart {
+	&__title-area {
+		display: grid;
+		gap: toRem(10);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 20, 0, $containerWidth, 768);
+		}
+	}
+	&__title {
+		font-size: toRem(24);
+		font-weight: 600;
+	}
+	&__subtitle {
+		color: var(--secondary);
+	}
+	&__form {
+		display: flex;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 37, 20, 0, $containerWidth, 768);
+		}
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			row-gap: toRem(10);
+		}
+	}
+	&__input {
+		outline: none;
+		padding: toRem(2) toRem(8);
+		background-color: var(--white);
+		border-radius: toRem(12) 0 0 toRem(12);
+		border-top: toRem(1) solid var(--pale-slate);
+		border-left: toRem(1) solid var(--pale-slate);
+		border-bottom: toRem(1) solid var(--pale-slate);
+		@media (max-width: $mobileSmall) {
+			padding: toRem(6) toRem(8);
+			border-radius: toRem(12);
+			border-right: toRem(1) solid var(--pale-slate);
+		}
+	}
+	&__button {
+		padding: toRem(12) toRem(30);
+		border-radius: 0 toRem(12) toRem(12) 0;
+		border: toRem(1) solid var(--pale-slate);
+		background-color: var(--purple);
+		color: var(--white);
+		font-weight: 600;
+		transition: background 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--purpleHover);
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			border-radius: toRem(12);
+		}
+	}
+	&__link {
+		padding: toRem(12) toRem(40);
+		border-radius: toRem(8);
+		border: toRem(1) solid var(--pale-slate);
+		background-color: var(--white);
+		text-align: center;
+		font-weight: 600;
+		transition:
+			background 0.3s ease-in-out,
+			color 0.3s ease-in-out;
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--white);
+				background-color: var(--purple);
+			}
+		}
+	}
+}
+
+.details-cart {
+	padding-bottom: toRem(49);
+	background-color: #f3f3f3;
+	@media (max-width: $tablet) {
+		padding-bottom: toRem(35);
+	}
+	@media (max-width: $tablet) {
+		width: 100%;
+	}
+	@media (min-width: $mobile) {
+		@include adaptiveValue("flex-basis", 480, 400, 0, $containerWidth, 768);
+	}
+	&__info {
+		padding: toRem(39) toRem(91) toRem(50);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 30, 0, $containerWidth, 992);
+			border-bottom: toRem(1) solid var(--pale-slate);
+		}
+		@media (max-width: $tablet) {
+			padding: toRem(30) toRem(50) toRem(40);
+		}
+		@media (max-width: $mobileSmall) {
+			padding: toRem(30) toRem(30) toRem(40);
+		}
+	}
+	&__rows {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 20, 0, $containerWidth, 768);
+		}
+	}
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: toRem(20);
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+	&__category,
+	&__value {
+		@include adaptiveValue("font-size", 22, 20, 0, $containerWidth, 992);
+		font-weight: 500;
+		letter-spacing: toRem(0.44);
+	}
+	&__row--total {
+		.details-cart__category,
+		.details-cart__value {
+			font-weight: 700;
+		}
+	}
+	&__wrap {
+		padding: 0 toRem(20);
+		text-align: center;
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+	&__link {
+		padding: toRem(16) toRem(40);
+		text-align: center;
+		color: var(--white);
+		font-size: toRem(18);
+		font-weight: 600;
+		border-radius: toRem(8);
+		background-color: var(--purple);
+		transition: background 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--purpleHover);
+			}
+		}
+	}
+}

@@ -6,43 +6,37 @@
 	}
 	&__title {
 		width: 100%;
+		height: toRem(53);
 		text-align: left;
-		border-radius: toRem(4);
-		background: var(--dune);
-		border: toRem(1) solid transparent;
+		border-radius: toRem(8);
+		background-color: var(--wild-sand);
 		cursor: pointer;
+		transition: background 0.3s ease-in-out;
 		@media (any-hover: hover) {
 			&:hover {
-				background: var(--duneHover);
+				background-color: var(--alto);
 			}
-		}
-		._select-open & {
-			border-color: var(--straw);
-			box-shadow: 0 toRem(2) toRem(10) 0 rgba(184, 164, 142, 0.4);
 		}
 	}
 	&__value {
 		display: flex;
 		min-width: 0;
 		align-items: center;
-		padding: toRem(4) toRem(30);
+		padding: 0 toRem(20);
 		gap: toRem(10);
 		@media (max-width: $tablet) {
 			padding: toRem(4) toRem(20);
-		}
-		> * {
-			flex: 1 1 auto;
 		}
 		&:after {
 			content: "";
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			flex: 0 0 toRem(20);
-			width: toRem(20);
 			align-self: center;
-			height: toRem(40);
-			background: url("../icons/arrow-down.svg") center / cover no-repeat;
+			flex: 0 0 toRem(12);
+			width: toRem(12);
+			height: toRem(7);
+			background: url("../icons/select-arrow-down.svg") center / cover no-repeat;
 			transition: all 0.3s ease;
 			._select-open & {
 				transform: rotate(-180deg);
@@ -57,9 +51,12 @@
 	}
 	&__content {
 		flex: 1 1 auto;
-		@include gradient;
-		font-family: $fontSecondary, sans-serif;
+		color: var(--secondary);
+		font-size: toRem(14);
 		line-height: 1.2;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	&__text {
 		flex: 1 1 auto;
@@ -73,16 +70,20 @@
 		height: 100%;
 	}
 	&__options {
-		color: #000;
 		position: absolute;
 		top: calc(100% - toRem(0));
 		min-width: 100%;
 		left: 0;
+		padding: toRem(10);
+		border-radius: toRem(8);
+		background-color: var(--wild-sand);
+		box-shadow: 0 toRem(8) toRem(16) rgba(0, 0, 0, 0.2);
 	}
 	&__scroll {
-		// overflow-y: auto;
+		overflow-y: auto;
 		// overflow-x: hidden;
 		// Максимальна висота
+		max-height: toRem(230);
 		.simplebar-scrollbar {
 			&::before {
 				// opacity: 1;
@@ -91,29 +92,25 @@
 	}
 	&__option {
 		width: 100%;
-		padding: toRem(14) toRem(30);
+		padding: toRem(15) toRem(20);
+		border-radius: toRem(8);
+		background-color: var(--wild-sand);
+		color: var(--secondary);
 		text-align: left;
-		border-radius: toRem(4);
-		background: #2b2825;
-		box-shadow: 0 toRem(2) toRem(10) 0 rgba(184, 164, 142, 0.4);
 		cursor: pointer;
+		transition: background 0.3s ease-in-out;
 		span {
 			font-family: $fontSecondary, sans-serif;
 			font-size: toRem(14);
-			@include gradient;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #ddddddbd;
+			}
 		}
 		// &._select-selected {
 		// 	background-color: #eee;
 		// }
-		@media (any-hover: hover) {
-			&:hover {
-				background: var(--bgGold);
-				span {
-					@include gradientNone;
-					color: #3c3428;
-				}
-			}
-		}
 	}
 	&__row {
 		display: inline-flex;

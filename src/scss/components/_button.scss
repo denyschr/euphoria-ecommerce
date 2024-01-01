@@ -1,15 +1,21 @@
 .button {
-	padding: toRem(12) toRem(48);
-	text-align: center;
-	font-size: toRem(18);
-	font-weight: 500;
+	padding: toRem(18) toRem(22);
 	border-radius: toRem(8);
+	text-align: center;
+	@include adaptiveValue("font-size", 18, 16, 0, $containerWidth, 480);
+	font-weight: 500;
 	&--fill {
+		color: #fff;
 		background-color: var(--purple);
-		color: var(--white);
+		transition: background 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--purpleHover);
+			}
+		}
 	}
 	&--border {
-		border: toRem(1) solid var(--primary);
 		color: var(--purple);
+		border: toRem(1) solid var(--primary);
 	}
 }

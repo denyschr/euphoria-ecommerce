@@ -355,8 +355,7 @@ class SelectConstructor {
 		// Будуємо та повертаємо конструкцію елемента
 		let selectOptionHTML = ``;
 		selectOptionHTML += selectOptionLink ? `<a ${selectOptionLinkTarget} ${selectOptionHide} href="${selectOptionLink}" data-value="${selectOption.value}" class="${this.selectClasses.classSelectOption}${selectOptionClass}${selectOptionSelected}">` : `<button ${selectOptionHide} class="${this.selectClasses.classSelectOption}${selectOptionClass}${selectOptionSelected}" data-value="${selectOption.value}" type="button">`;
-		// selectOptionHTML += this.getSelectElementContent(selectOption);
-		selectOptionHTML += `<span>${this.getSelectElementContent(selectOption)}</span>`;
+		selectOptionHTML += this.getSelectElementContent(selectOption);
 		selectOptionHTML += selectOptionLink ? `</a>` : `</button>`;
 		return selectOptionHTML;
 	}

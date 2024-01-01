@@ -18,6 +18,14 @@
 	@include adaptiveValue("font-size", 28, 24, 0, $containerWidth, 479.98);
 }
 
+.title--fs-24 {
+	@include adaptiveValue("font-size", 24, 20, 0, $containerWidth, 479.98);
+}
+
+.title--fs-22 {
+	@include adaptiveValue("font-size", 22, 18, 0, $containerWidth, 479.98);
+}
+
 .title--offset-70 {
 	&:not(:last-child) {
 		@include adaptiveValue("margin-bottom", 70, 40, 0, $containerWidth, 992);
@@ -32,7 +40,7 @@
 
 .title--decor {
 	position: relative;
-	padding-left: toRem(26);
+	@include adaptiveValue("padding-left", 26, 18, 0, $containerWidth, 480);
 	&::before {
 		content: "";
 		position: absolute;
@@ -44,6 +52,19 @@
 		border-radius: toRem(4);
 		background-color: var(--purple);
 	}
+}
+
+.label {
+	font-weight: 600;
+	letter-spacing: toRem(0.36);
+}
+
+.label--fs-18 {
+	@include adaptiveValue("font-size", 18, 14, 0, $containerWidth, 480);
+}
+
+.label--fs-20 {
+	@include adaptiveValue("font-size", 20, 16, 0, $containerWidth, 480);
 }
 
 .grid-slider {

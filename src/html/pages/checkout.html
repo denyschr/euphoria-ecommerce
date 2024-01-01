@@ -1,0 +1,255 @@
+<section class="page__checkout checkout section-offset">
+	<div class="checkout__container">
+		<ul class="checkout__breadcrumbs breadcrumbs">
+			<li class="breadcrumbs__item">
+				<a href="index.html" class="breadcrumbs__link">Home</a>
+			</li>
+			<li class="breadcrumbs__item">
+				<a href="index.html" class="breadcrumbs__link">My Account</a>
+			</li>
+			<li class="breadcrumbs__item">
+				<a class="breadcrumbs__link breadcrumbs__link--active">Check Out</a>
+			</li>
+		</ul>
+		<div class="checkout__billing billing-checkout">
+			<div class="billing-checkout__title-area">
+				<h1 class="billing-checkout__title title title--fs-28 title--decor">Check Out</h1>
+				<h2 class="billing-checkout__subtitle title title--fs-22">Billing Details</h2>
+			</div>
+			<div class="billing-checkout__body">
+				<form action="#" method="POST" class="billing-checkout__form form-billing">
+					<div class="form-billing__body">
+						<div class="form-billing__field field-form">
+							<label for="first-name" class="field-form__label">First Name*</label>
+							<input id="first-name" name="form[]" type="text" class="field-form__input" placeholder="First Name" required>
+						</div>
+						<div class="form-billing__field field-form">
+							<label for="last-name" class="field-form__label">Last Name*</label>
+							<input id="last-name" name="form[]" type="text" class="field-form__input" placeholder="Last Name" required>
+						</div>
+						<div class="form-billing__field field-form">
+							<label for="whereabouts" class="field-form__label">Country / Region*</label>
+							<input id="whereabouts" name="form[]" type="text" class="field-form__input" placeholder="Country / Region" required>
+						</div>
+						<div class="form-billing__field field-form">
+							<label for="company" class="field-form__label">Company Name</label>
+							<input id="company" name="form[]" type="text" class="field-form__input" placeholder="Company Name">
+						</div>
+						<div class="form-billing__field field-form">
+							<label for="street" class="field-form__label">Street Address*</label>
+							<input id="street" name="form[]" type="text" class="field-form__input" placeholder="Street Address" required>
+						</div>
+						<div class="form-billing__field field-form">
+							<label for="housing-unit" class="field-form__label">Apt, suite, unit</label>
+							<input id="housing-unit" name="form[]" type="text" class="field-form__input" placeholder="apartment, suite, unit, etc. (optional)">
+						</div>
+						<div class="form-billing__field form-billing__field--secondary field-form">
+							<label for="city" class="field-form__label">City*</label>
+							<input id="city" name="form[]" type="text" class="field-form__input" placeholder="Town / City" required>
+						</div>
+						<div class="form-billing__field form-billing__field--secondary field-form">
+							<label for="#" class="field-form__label">State*</label>
+							<select name="form[]">
+								<option value="1" selected>State</option>
+								<option value="2">Florida</option>
+								<option value="3">Georgia</option>
+								<option value="4">Maine</option>
+								<option value="5">New York</option>
+							</select>
+						</div>
+						<div class="form-billing__field form-billing__field--secondary field-form">
+							<label for="postal-code" class="field-form__label">Postal Code*</label>
+							<input id="postal-code" name="form[]" type="text" class="field-form__input" placeholder="Postal Code" required>
+						</div>
+						<div class="form-billing__field field-form">
+							<label for="phone" class="field-form__label">Phone*</label>
+							<input id="phone" name="form[]" type="tel" class="field-form__input" placeholder="Phone" required>
+						</div>
+					</div>
+					<button type="submit" class="form-billing__button button button--fill">Continue to delivery</button>
+					<div class="form-billing__checkbox checkbox">
+						<input id="save-info" name="form[]" type="checkbox" class="checkbox__input">
+						<label for="save-info" class="checkbox__label">Save my information for a faster checkout</label>
+					</div>
+				</form>
+				<div class="billing-checkout__summary summary-billing">
+					<h3 class="summary-billing__title title title--fs-24">Order Summary</h3>
+					<div class="summary-billing__product product-summary">
+						<a href="#" class="product-summary__img">
+							<img src="img/female-category-03.webp" srcset="img/female-category-03.webp 1x, img/female-category-03_2x.webp 2x" alt="Blue Flower Print Crop Top">
+						</a>
+						<div class="product-summary__descr">
+							<h4 class="product-summary__name">
+								<a href="#">Blue Flower Print Crop Top <span>x 1</span></a>
+							</h4>
+							<div class="product-summary__row">
+								<div class="product-summary__label">Color</div>
+								<span>:</span>
+								<div class="product-summary__value">Yellow</div>
+							</div>
+						</div>
+						<div class="product-summary__price">$29.00</div>
+					</div>
+					<div class="summary-billing__product product-summary">
+						<a href="#" class="product-summary__img">
+							<img src="img/product-04.webp" srcset="img/product-04.webp 1x, img/product-04_2x.webp 2x" alt="Levender Hoodie">
+						</a>
+						<div class="product-summary__descr">
+							<h4 class="product-summary__name">
+								<a href="#">Levender Hoodie <span>x 2</span></a>
+							</h4>
+							<div class="product-summary__row">
+								<div class="product-summary__label">Color</div>
+								<span>:</span>
+								<div class="product-summary__value">Levander</div>
+							</div>
+						</div>
+						<div class="product-summary__price">$119.00</div>
+					</div>
+					<div class="summary-billing__product product-summary">
+						<a href="#" class="product-summary__img">
+							<img src="img/product-01.webp" srcset="img/product-01.webp 1x, img/product-01_2x.webp 2x" alt="Black Sweatshirt">
+						</a>
+						<div class="product-summary__descr">
+							<h4 class="product-summary__name">
+								<a href="#">Black Sweatshirt <span>x 2</span></a>
+							</h4>
+							<div class="product-summary__row">
+								<div class="product-summary__label">Color</div>
+								<span>:</span>
+								<div class="product-summary__value">Black</div>
+							</div>
+						</div>
+						<div class="product-summary__price">$123.00</div>
+					</div>
+					<div class="summary-billing__rows">
+						<div class="summary-billing__row">
+							<div class="summary-billing__label label label--fs-18">Subtotal <span>(3 items)</span></div>
+							<div class="summary-billing__value label label--fs-18">$513.00</div>
+						</div>
+						<div class="summary-billing__row">
+							<div class="summary-billing__label label label--fs-18">Savings</div>
+							<div class="summary-billing__value label label--fs-18">-$30.00</div>
+						</div>
+					</div>
+					<div class="summary-billing__row">
+						<div class="summary-billing__label label label--fs-18">Shipping</div>
+						<div class="summary-billing__value label label--fs-18">-$5.00</div>
+					</div>
+					<div class="summary-billing__row">
+						<div class="summary-billing__label label label--fs-18">Total</div>
+						<div class="summary-billing__value label label--fs-18">$478.00</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<form action="#" method="POST" class="checkout__payment payment-form">
+			<div class="payment-form__shipping-address shipping-address">
+				<div class="payment-form__title-area">
+					<h2 class="payment-form__title title title--fs-22">Shipping Address</h2>
+					<h3 class="payment-form__subtitle">Select the address that matches your card or payment method.</h3>
+				</div>
+				<div class="payment-form__block">
+					<div class="payment-form__line">
+						<div class="shipping-address__radio radio">
+							<input id="same-billing-address" name="form[]" type="radio" class="radio__input" checked>
+							<label for="same-billing-address" class="radio__label label label--fs-20">Same as Billing address</label>
+						</div>
+					</div>
+					<div class="payment-form__line">
+						<div class="shipping-address__radio radio">
+							<input id="different-billing-address" name="form[]" type="radio" class="radio__input">
+							<label for="different-billing-address" class="radio__label label label--fs-20">Use a different shipping address</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="payment-form__shipping-method">
+				<div class="payment-form__title-area">
+					<h2 class="payment-form__title title title--fs-22">Shipping Method</h2>
+				</div>
+				<div class="payment-form__block">
+					<div class="payment-form__line">
+						<div class="payment-form__label label label--fs-20">Arrives by Monday, June 7</div>
+					</div>
+					<div class="payment-form__line payment-form__line--secondary">
+						<div class="payment-form__info">
+							<div class="payment-form__label label label--fs-20">Delivery Charges</div>
+							<div class="payment-form__sublabel">Additional fess may apply</div>
+						</div>
+						<div class="payment-form__value label label--fs-20">$5.00</div>
+					</div>
+				</div>
+			</div>
+			<div class="payment-form__payment-method payment-method">
+				<div class="payment-form__title-area">
+					<h2 class="payment-form__title title title--fs-22">Payment Method</h2>
+					<h3 class="payment-form__subtitle">All transactions are secure and encrypted.</h3>
+				</div>
+				<div class="payment-method__block">
+					<div class="payment-form__line">
+						<div class="payment-method__radio radio">
+							<input id="credit-card" name="form[]" type="radio" class="radio__input" checked>
+							<label for="credit-card" class="radio__label radio__label--block">
+								<div class="payment-method__label label label--fs-20">Credit Card</div>
+								<div class="payment-method__sublabel">We accept all major credit cards.</div>
+							</label>
+							<div class="payment-method__card card-payment">
+								<div class="card-payment__icons">
+									<div class="card-payment__icon">
+										<img src="icons/google-pay.svg" alt="Google pay">
+									</div>
+									<div class="card-payment__icon">
+										<img src="icons/visa.svg" alt="Visa">
+									</div>
+									<div class="card-payment__icon">
+										<img src="icons/paypal.svg" alt="PayPal">
+									</div>
+									<div class="card-payment__icon">
+										<img src="icons/paypass.svg" alt="Paypass">
+									</div>
+								</div>
+								<div class="card-payment__details">
+									<div class="card-payment__field field-form">
+										<input id="card-number" name="form[]" autocomplete="off" type="text" class="field-form__input" placeholder="Card number" required>
+									</div>
+									<div class="card-payment__field field-form">
+										<input id="card-holder" name="form[]" autocomplete="off" type="text" class="field-form__input" placeholder="Name of card" required>
+									</div>
+									<div class="card-payment__field field-form">
+										<input id="card-validity" name="form[]" autocomplete="off" type="text" class="field-form__input" placeholder="Expiration date (MM/YY)" required>
+									</div>
+									<div class="card-payment__field field-form">
+										<input id="card-cvv" name="form[]" autocomplete="off" type="password" class="field-form__input" placeholder="Security Code" required>
+										<button type="button" class="card-payment__button">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M2.42442 10.9764C2.13978 10.3572 2.13978 9.64275 2.42442 9.02349C3.742 6.15698 6.63866 4.16663 10.0002 4.16663C13.3617 4.16663 16.2584 6.15698 17.576 9.02349C17.8606 9.64276 17.8606 10.3572 17.576 10.9764C16.2584 13.8429 13.3617 15.8333 10.0002 15.8333C6.63866 15.8333 3.74201 13.8429 2.42442 10.9764Z" stroke="#807D7E" stroke-width="1.5"/>
+												<path d="M12.5002 9.99996C12.5002 11.3807 11.3809 12.5 10.0002 12.5C8.61948 12.5 7.50019 11.3807 7.50019 9.99996C7.50019 8.61925 8.61948 7.49996 10.0002 7.49996C11.3809 7.49996 12.5002 8.61925 12.5002 9.99996Z" stroke="#807D7E" stroke-width="1.5"/>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="payment-form__line">
+						<div class="payment-method__radio radio">
+							<input id="cash" name="form[]" type="radio" class="radio__input">
+							<label for="cash" class="radio__label radio__label--block">
+								<div class="payment-method__label label label--fs-20">Cash on delivery</div>
+								<div class="payment-method__sublabel">Pay with cash upon delivery.</div>
+							</label>
+						</div>
+					</div>
+					<div class="payment-form__line">
+						<div class="payment-method__radio radio">
+							<input id="paypal" name="form[]" type="radio" class="radio__input">
+							<label for="paypal" class="radio__label label label--fs-20">Paypal</label>
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="payment-form__button button button--fill">Pay Now</button>
+			</div>
+		</form>
+	</div>
+</section>

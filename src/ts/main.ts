@@ -2,7 +2,7 @@ import '../scss/style.scss';
 // import './components/simplebar';
 import './libs/dynamic-adaptive';
 import './components/slider';
-// import './libs/select';
+import './libs/select';
 import './libs/spoilers';
 import preloader from './components/preloader';
 import './components/tabs';

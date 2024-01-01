@@ -1,16 +1,15 @@
 .checkbox {
 	position: relative;
+	&:not(:last-child) {
+		margin-bottom: toRem(12);
+	}
 	&__input {
 		position: absolute;
 		width: 0;
 		height: 0;
 		opacity: 0;
 		&:focus-visible + .checkbox__label:before {
-			box-shadow: 0 0 toRem(5) var(--goldHover);
-		}
-		&:checked + .checkbox__label:before {
-			background: var(--bgGold);
-			border: none;
+			box-shadow: 0 0 toRem(3) toRem(3) var(--purple);
 		}
 		&:checked + .checkbox__label::after {
 			opacity: 1;
@@ -21,29 +20,38 @@
 		position: relative;
 		display: inline-flex;
 		gap: toRem(10);
-		font-family: $fontSecondary;
-		line-height: 1.4;
+		font-size: toRem(18);
 		cursor: pointer;
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					background-color: var(--gray);
+				}
+			}
+		}
 		&:before {
 			content: "";
 			align-self: flex-start;
-			flex: 0 0 toRem(24);
-			width: toRem(24);
-			height: toRem(24);
-			border-radius: toRem(4);
-			border: toRem(1) solid var(--goldHover);
-			background: #1c1c1c;
+			flex: 0 0 toRem(18);
+			width: toRem(18);
+			height: toRem(18);
+			border-radius: toRem(2);
+			border: toRem(2) solid var(--pale-slate);
+			transition: background 0.2s ease-in-out;
 		}
 		&::after {
 			content: "";
 			position: absolute;
-			left: toRem(4);
-			top: toRem(5);
+			left: toRem(2);
+			top: toRem(1);
 			opacity: 0;
 			visibility: hidden;
-			width: toRem(15);
-			height: toRem(13);
-			background: url("../icons/checkmark.svg") center / toRem(15) toRem(11) no-repeat;
+			width: toRem(16);
+			height: toRem(16);
+			background: url("../icons/tick.svg") center no-repeat;
+			transition:
+				opacity 0.2s ease-in-out,
+				visibility 0.2s ease-in-out;
 		}
 	}
 }

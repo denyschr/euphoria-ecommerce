@@ -21,6 +21,8 @@ export default defineConfig({
 				main: './index.html',
 				products: './products.html',
 				product: './product.html',
+				cart: './cart.html',
+				checkout: './checkout.html',
 			}
 		}
 	},

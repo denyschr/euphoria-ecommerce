@@ -322,7 +322,7 @@
 		transition: background 0.3s ease-in-out;
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: #6c31ba;
+				background-color: var(--purpleHover);
 			}
 		}
 		span {

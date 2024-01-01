@@ -1,0 +1,58 @@
+.radio {
+	position: relative;
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:checked + .radio__label::before {
+			background: url("../icons/radio-selected.svg") center no-repeat;
+		}
+	}
+	&__label {
+		display: inline-flex;
+		@include adaptiveValue("gap", 18, 10, 0, $containerWidth, 480);
+		cursor: pointer;
+		transition: color 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--purple);
+			}
+		}
+		&::before {
+			content: "";
+			display: inline-block;
+			flex: 0 0 toRem(18);
+			width: toRem(18);
+			height: toRem(18);
+			margin-top: toRem(2);
+			background: url("../icons/radio-blank.svg") center no-repeat;
+			transition: background 0.3s ease-in-out;
+			@media (max-width: $mobile) {
+				margin-top: 0;
+			}
+		}
+		&--block {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			gap: toRem(8);
+			padding-left: toRem(36);
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				display: inline-block;
+				width: toRem(18);
+				height: toRem(18);
+				background: url("../icons/radio-blank.svg") center no-repeat;
+				transition: background 0.3s ease-in-out;
+			}
+			&:not(:last-child) {
+				margin-bottom: toRem(30);
+			}
+		}
+	}
+}
