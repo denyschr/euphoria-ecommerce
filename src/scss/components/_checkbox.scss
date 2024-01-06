@@ -15,6 +15,9 @@
 			opacity: 1;
 			visibility: visible;
 		}
+		&:checked + .checkbox__label:before {
+			background-color: #000;
+		}
 	}
 	&__label {
 		position: relative;
@@ -25,7 +28,7 @@
 		@media (any-hover: hover) {
 			&:hover {
 				&::before {
-					background-color: var(--gray);
+					background-color: #000;
 				}
 			}
 		}

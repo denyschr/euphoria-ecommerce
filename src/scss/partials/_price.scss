@@ -19,8 +19,8 @@
 		display: grid;
 		grid-template-columns: 6fr 1fr;
 		@include adaptiveValue("column-gap", 50, 10, 0, $containerWidth, 640);
-		@include adaptiveValue("padding-right", 66, 40, 0, $containerWidth, 991.98);
-		@include adaptiveValue("padding-left", 84, 40, 0, $containerWidth, 991.98);
+		@include adaptiveValue("padding-right", 66, 20, 0, $containerWidth, 768);
+		@include adaptiveValue("padding-left", 84, 20, 0, $containerWidth, 768);
 		border-bottom: toRem(1) solid var(--dark-gray);
 		@media (max-width: $tablet) {
 			grid-template-columns: 4fr 1fr;
@@ -49,8 +49,8 @@
 		}
 	}
 	&__body {
-		@include adaptiveValue("padding-right", 66, 40, 0, $containerWidth, 991.98);
-		@include adaptiveValue("padding-left", 84, 40, 0, $containerWidth, 991.98);
+		@include adaptiveValue("padding-right", 66, 20, 0, $containerWidth, 768);
+		@include adaptiveValue("padding-left", 84, 20, 0, $containerWidth, 768);
 	}
 	&__item {
 		display: grid;
@@ -86,6 +86,9 @@
 		@include adaptiveValue("font-size", 24, 20, 0, $containerWidth, 767.98);
 		line-height: 1.2;
 		letter-spacing: toRem(0.48);
+		@media (max-width: $mobile) {
+			padding: toRem(15) 0;
+		}
 	}
 	&__name {
 		padding-right: toRem(15);

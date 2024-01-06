@@ -1,5 +1,5 @@
 body {
-	min-width: toRem($minWidth);
+	min-width: em($minWidth);
 	color: var(--primary);
 	background-color: var(--white);
 	font-family: $fontMain, sans-serif;

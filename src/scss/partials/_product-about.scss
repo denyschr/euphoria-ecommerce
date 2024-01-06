@@ -27,14 +27,18 @@
 	&__nav {
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("gap", 30, 20, 0, $containerWidth, 20);
+		@include adaptiveValue("gap", 30, 20, 0, $containerWidth, 768);
+		overflow: auto;
 		&:not(:last-child) {
-			margin-bottom: toRem(30);
 			@include adaptiveValue("margin-bottom", 30, 20, 0, $containerWidth, 768);
+			padding-bottom: toRem(10);
 		}
-		@media (max-width: em(590)) {
-			flex-direction: column;
-		}
+		// @media (max-width: em(590)) {
+		// 	flex-direction: column;
+		// }
+	}
+	&__item {
+		flex-shrink: 0;
 	}
 	&__button {
 		position: relative;
@@ -53,10 +57,10 @@
 			border-radius: toRem(2);
 			background-color: #000;
 			transition: opacity 0.3s ease-in-out;
-			@media (max-width: em(590)) {
-				left: 50%;
-				transform: translateX(-50%);
-			}
+			// @media (max-width: em(590)) {
+			// 	left: 50%;
+			// 	transform: translateX(-50%);
+			// }
 		}
 		&._tab-active {
 			&::before {
