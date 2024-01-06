@@ -1,13 +1,26 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Splitting from "splitting";
+
+Splitting();
+
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".preloader__item", {
-	scrollTrigger: ".preloader__item",
-	stagger: 0.10,
-	yPercent: -100,
+gsap.utils.toArray(".title").forEach((title: any): void => {
+	const chars = title.querySelectorAll(".char");
+	gsap.timeline({
+		scrollTrigger: {
+				trigger: title,
+		}
+	}).from(chars, {
+			opacity: 0,
+			stagger: 0.06,
+			ease: "back.out",
+	});
 });
+
+
 
 gsap.from(".banner__item", {
 	scrollTrigger: ".banner__item",

@@ -9,7 +9,7 @@ function preloader(): void {
 				if (counter === mediaFiles.length) {
 					setTimeout((): void => {
 						preloaderItem.classList.add('_hidden');
-					}, 1600);
+					}, 1200);
 				}
 			};
 			Array.from(mediaFiles).forEach((mediaFile): void => {
