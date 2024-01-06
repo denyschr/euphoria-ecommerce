@@ -9,6 +9,7 @@ import menuInit from './components/menu';
 import goToTopInit from './components/go-to-top';
 import './libs/range';
 import GrapthTabs from './components/tabs';
+import './components/animations';
 
 preloader();
 menuInit();

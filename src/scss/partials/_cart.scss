@@ -42,6 +42,7 @@
 }
 
 .body-cart {
+	overflow-x: auto;
 	&__header {
 		padding-top: toRem(26);
 		padding-bottom: toRem(28);
@@ -52,7 +53,7 @@
 	}
 	&__labels {
 		display: grid;
-		grid-template-columns: 2fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr;
+		grid-template-columns: 2fr repeat(5, 0.6fr);
 		align-items: center;
 		@include adaptiveValue("column-gap", 60, 30, 0, $containerWidth, 992);
 	}
@@ -69,7 +70,7 @@
 
 .product-cart {
 	display: grid;
-	grid-template-columns: 2fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr;
+	grid-template-columns: 2fr repeat(5, 0.6fr);
 	justify-items: center;
 	align-items: center;
 	@include adaptiveValue("gap", 60, 30, 0, $containerWidth, 992);
@@ -222,7 +223,7 @@
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 37, 20, 0, $containerWidth, 768);
 		}
-		@media (max-width: $tablet) {
+		@media (max-width: $mobileSmall) {
 			flex-direction: column;
 			row-gap: toRem(10);
 		}

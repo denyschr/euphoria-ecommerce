@@ -22,7 +22,7 @@ export default defineConfig({
 				products: './products.html',
 				product: './product.html',
 				cart: './cart.html',
-				checkout: './checkout.html',
+				checkout: './checkout.html'
 			}
 		}
 	},

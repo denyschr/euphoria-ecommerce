@@ -6,6 +6,7 @@
 		row-gap: toRem(30);
 		@media (max-width: $tablet) {
 			flex-direction: column;
+			align-items: stretch;
 		}
 	}
 	&__tabs {
@@ -29,13 +30,10 @@
 		align-items: center;
 		@include adaptiveValue("gap", 30, 20, 0, $containerWidth, 768);
 		overflow: auto;
+		padding-bottom: toRem(10);
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 30, 20, 0, $containerWidth, 768);
-			padding-bottom: toRem(10);
+			@include adaptiveValue("margin-bottom", 20, 15, 0, $containerWidth, 768);
 		}
-		// @media (max-width: em(590)) {
-		// 	flex-direction: column;
-		// }
 	}
 	&__item {
 		flex-shrink: 0;
@@ -57,10 +55,6 @@
 			border-radius: toRem(2);
 			background-color: #000;
 			transition: opacity 0.3s ease-in-out;
-			// @media (max-width: em(590)) {
-			// 	left: 50%;
-			// 	transform: translateX(-50%);
-			// }
 		}
 		&._tab-active {
 			&::before {
